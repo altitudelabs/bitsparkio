@@ -44,6 +44,11 @@ a,a:hover,a:focus {
     -o-transition:all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
+/* buysellButton */
+.buysellButton
+{
+  text-align: left;
+}
 /*login page*/
 .login-body {
     background:#32323A;
