@@ -239,7 +239,7 @@ img {
 	z-index: 150;
 }
 .logo a {
-	background: url("../img/logo.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background: url("../img/bit_logo.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 	display: block;
 	height: 27px;
 	width: 118px;
@@ -1461,7 +1461,8 @@ select.styled {
 	text-decoration: none;
 }
 .excerpt {
-	color: #798089;
+	font-size: 20px;
+	color: #FFFFFF;
 	line-height: 24px;
 	margin-bottom: 40px;
 }
@@ -2382,12 +2383,13 @@ span.customSelect {
 	position: static;
 }
 .firstslide {
-	background: url("../img/back3.jpg") no-repeat fixed;
+/*	background: url("../img/back3.jpg") no-repeat fixed;
+*/	background: #83D6D1 no-repeat fixed;
 	-webkit-background-size: cover;
 		 -moz-background-size: cover;
 					background-size: cover;
 }
-.secondslide {
+/*.secondslide {
 	background: url("../img/back2.jpg") no-repeat fixed;
 	-webkit-background-size: cover;
 		 -moz-background-size: cover;
@@ -2398,7 +2400,7 @@ span.customSelect {
 	-webkit-background-size: cover;
 		 -moz-background-size: cover;
 					background-size: cover;
-}
+}*/
 #form_slider.big-bxslider .bx-viewport {
 	width: 100% !important;
 }
