@@ -79,8 +79,9 @@
 
                     document.body.appendChild(script1);
                     document.body.appendChild(script2);
-                    document.body.appendChild(script3);
-
+                    setTimeout(function(){
+                        document.body.appendChild(script3);
+                    }, 250);
                  });
              });
 
@@ -98,7 +99,9 @@
                     script2.className = "chartsrc";
 
                     document.body.appendChild(script1);
-                    document.body.appendChild(script2);
+                    setTimeout(function(){
+                        document.body.appendChild(script2);
+                    }, 250);
                  });
             });
 
@@ -146,7 +149,9 @@
                     document.body.appendChild(script5);
                     document.body.appendChild(script6);
                     document.body.appendChild(script7);
-                    document.body.appendChild(script8);
+                    setTimeout(function(){
+                        document.body.appendChild(script8);
+                    }, 250);
                  });
             });
 
