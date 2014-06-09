@@ -1,1 +1,1 @@
-web: ./bucketadmin/themeforest/BucketAdmin/server.js
+web: bucketadmin/themeforest/BucketAdmin/server.js
