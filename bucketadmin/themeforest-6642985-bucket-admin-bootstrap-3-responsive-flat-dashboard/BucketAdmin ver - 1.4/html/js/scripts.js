@@ -5,13 +5,63 @@
 //
         /*== ROUTING ==*/
         $(document).ready(function(){
+             /*== NAVIGATION ==*/
 
+             //Account
              $("#navigation-accounts").click(function(){
-                 $(".wrapper").load("./eugene/accounts.html");
+                console.log('loading not-ready');
+                 $(".wrapper").load("./eugene/not-ready.html");
              });
 
+             //Trade
+             $("#trade-buy").click(function(e){
+                $(".wrapper").load("./eugene/buy.html", function(){
+                    $( ".chartsrc" ).remove();
+                    // setTimeout(function(){
+                        console.log('loading data!');
+                        var script1 = document.createElement('script');                    
+                        script1.src = "js/morris-chart/raphael-min.js";
+                        script1.className = "chartsrc";
+                
+                        var script2 = document.createElement('script');
+                        script2.src = "js/morris-chart/morris.js";
+                        script2.className = "chartsrc";
+                        
+                        var script3 = document.createElement('script');
+                        script3.src = "eugene/chartData/buy.js";
+                        script3.className = "chartsrc";
+
+                        document.body.appendChild(script1);
+                        document.body.appendChild(script2);
+                        setTimeout(function(){
+                            document.body.appendChild(script3);
+                        }, 250);
+                    // }, 500);
+                });
+
+                // if (!$('#container').hasClass('open-right-panel')) {
+                //     console.log('hi');
+                //     $('#container').toggleClass('open-right-panel');
+                // }
+                // if (!$('.right-sidebar').hasClass('open-right-bar')) {
+                //     $('.right-sidebar').toggleClass('open-right-bar');
+                // }
+
+                // if ($('.header').hasClass('merge-header')) {
+                //     $('.header').removeClass('merge-header');
+                // }
+
+                $('#container').toggleClass('open-right-panel');
+                $('.right-sidebar').toggleClass('open-right-bar');
+                $('.header').toggleClass('merge-header');
+
+                e.stopPropagation(); 
+             });
+
+
+
              $("#chart-morris").click(function(){
-                 $(".wrapper").load("./eugene/morris.html", function(){
+                $(".wrapper").load("./eugene/morris.html", function(){
                     
                     $( ".chartsrc" ).remove();
 
@@ -308,7 +358,7 @@
 
 
         $('.sidebar-toggle-box .fa-bars').click(function (e) {
-
+            console.log('sidebar toggle box clicked')
             $(".leftside-navigation").niceScroll({
                 cursorcolor: "#1FB5AD",
                 cursorborder: "0px solid #fff",
@@ -337,6 +387,8 @@
 
         });
         $('.toggle-right-box .fa-bars').click(function (e) {
+            console.log('right toggle box clicked')
+
             $('#container').toggleClass('open-right-panel');
             $('.right-sidebar').toggleClass('open-right-bar');
             $('.header').toggleClass('merge-header');
@@ -344,20 +396,22 @@
             e.stopPropagation();
         });
 
-        $('.header,#main-content,#sidebar').click(function () {
-            if ($('#container').hasClass('open-right-panel')) {
-                $('#container').removeClass('open-right-panel')
-            }
-            if ($('.right-sidebar').hasClass('open-right-bar')) {
-                $('.right-sidebar').removeClass('open-right-bar')
-            }
+        // $('.header,#main-content,#sidebar').click(function () {
+        //     console.log('main-content sidebar toggle box clicked')
 
-            if ($('.header').hasClass('merge-header')) {
-                $('.header').removeClass('merge-header')
-            }
+        //     if ($('#container').hasClass('open-right-panel')) {
+        //         $('#container').removeClass('open-right-panel')
+        //     }
+        //     if ($('.right-sidebar').hasClass('open-right-bar')) {
+        //         $('.right-sidebar').removeClass('open-right-bar')
+        //     }
+
+        //     if ($('.header').hasClass('merge-header')) {
+        //         $('.header').removeClass('merge-header')
+        //     }
 
 
-        });
+        // });
 
 
         $('.panel .tools .fa').click(function () {
