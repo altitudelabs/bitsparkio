@@ -1461,7 +1461,8 @@ select.styled {
 	text-decoration: none;
 }
 .excerpt {
-	color: #798089;
+	font-size: 20px;
+	color: #FFFFFF;
 	line-height: 24px;
 	margin-bottom: 40px;
 }
