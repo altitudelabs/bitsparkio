@@ -1,1356 +1,734 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if IE 7 ]><body class="ie ie7"><![endif]-->
+<!--[if IE 8 ]><body class="ie ie8"><![endif]-->
+<!--[if IE 9 ]><body class="ie ie9"><![endif]-->
+<html class='no-js' lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="ThemeBucket">
-    <link rel="shortcut icon" href="images/favicon.png">
-    <title>BucketAdmin</title>
-    <!--Core CSS -->
-    <link href="bs3/css/bootstrap.min.css" rel="stylesheet">
-    <link href="js/jquery-ui/jquery-ui-1.10.1.custom.min.css" rel="stylesheet">
-    <link href="css/bootstrap-reset.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="js/jvector-map/jquery-jvectormap-1.2.2.css" rel="stylesheet">
-    <link href="css/clndr.css" rel="stylesheet">
-    <!--clock css-->
-    <link href="js/css3clock/css/style.css" rel="stylesheet">
-    <!--Morris Chart CSS -->
-    <link rel="stylesheet" href="js/morris-chart/morris.css">
-    <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/style-responsive.css" rel="stylesheet"/>
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]>
-    <script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+  <title>Bitspark.io</title>
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <link type="image/x-icon" href="img/favicon.ico" rel="shortcut icon">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+
 </head>
 <body>
-<section id="container">
-<!--header start-->
-<header class="header fixed-top clearfix">
-<!--logo start-->
-<div class="brand">
-
-    <a href="index.html" class="logo">
-        <img src="images/logo.png" alt="">
-    </a>
-    <div class="sidebar-toggle-box">
-        <div class="fa fa-bars"></div>
+<!--===========================-->
+<!--==========Header===========-->
+<div id="preloader">
+  <div id="status">
+    <div class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
     </div>
+  </div>
 </div>
-<!--logo end-->
 
-<div class="nav notify-row" id="top_menu">
-    <!--  notification start -->
-    <ul class="nav top-menu">
-        <!-- settings start -->
-        <li class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                <i class="fa fa-tasks"></i>
-                <span class="badge bg-success">8</span>
-            </a>
-            <ul class="dropdown-menu extended tasks-bar">
-                <li>
-                    <p class="">You have 8 pending tasks</p>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="task-info clearfix">
-                            <div class="desc pull-left">
-                                <h5>Target Sell</h5>
-                                <p>25% , Deadline  12 June’13</p>
-                            </div>
-                                    <span class="notification-pie-chart pull-right" data-percent="45">
-                            <span class="percent"></span>
-                            </span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="task-info clearfix">
-                            <div class="desc pull-left">
-                                <h5>Product Delivery</h5>
-                                <p>45% , Deadline  12 June’13</p>
-                            </div>
-                                    <span class="notification-pie-chart pull-right" data-percent="78">
-                            <span class="percent"></span>
-                            </span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="task-info clearfix">
-                            <div class="desc pull-left">
-                                <h5>Payment collection</h5>
-                                <p>87% , Deadline  12 June’13</p>
-                            </div>
-                                    <span class="notification-pie-chart pull-right" data-percent="60">
-                            <span class="percent"></span>
-                            </span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="task-info clearfix">
-                            <div class="desc pull-left">
-                                <h5>Target Sell</h5>
-                                <p>33% , Deadline  12 June’13</p>
-                            </div>
-                                    <span class="notification-pie-chart pull-right" data-percent="90">
-                            <span class="percent"></span>
-                            </span>
-                        </div>
-                    </a>
-                </li>
+<div class="main-holder">
+<header class='main-wrapper header'>
+  <div class="container apex">
+    <div class="row">
 
-                <li class="external">
-                    <a href="#">See All Tasks</a>
-                </li>
-            </ul>
-        </li>
-        <!-- settings end -->
-        <!-- inbox dropdown start-->
-        <li id="header_inbox_bar" class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                <i class="fa fa-envelope-o"></i>
-                <span class="badge bg-important">4</span>
-            </a>
-            <ul class="dropdown-menu extended inbox">
-                <li>
-                    <p class="red">You have 4 Mails</p>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="photo"><img alt="avatar" src="images/avatar-mini.jpg"></span>
-                                <span class="subject">
-                                <span class="from">Jonathan Smith</span>
-                                <span class="time">Just now</span>
-                                </span>
-                                <span class="message">
-                                    Hello, this is an example msg.
-                                </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="photo"><img alt="avatar" src="images/avatar-mini-2.jpg"></span>
-                                <span class="subject">
-                                <span class="from">Jane Doe</span>
-                                <span class="time">2 min ago</span>
-                                </span>
-                                <span class="message">
-                                    Nice admin template
-                                </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="photo"><img alt="avatar" src="images/avatar-mini-3.jpg"></span>
-                                <span class="subject">
-                                <span class="from">Tasi sam</span>
-                                <span class="time">2 days ago</span>
-                                </span>
-                                <span class="message">
-                                    This is an example msg.
-                                </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="photo"><img alt="avatar" src="images/avatar-mini.jpg"></span>
-                                <span class="subject">
-                                <span class="from">Mr. Perfect</span>
-                                <span class="time">2 hour ago</span>
-                                </span>
-                                <span class="message">
-                                    Hi there, its a test
-                                </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">See all messages</a>
-                </li>
-            </ul>
-        </li>
-        <!-- inbox dropdown end -->
-        <!-- notification dropdown start-->
-        <li id="header_notification_bar" class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+      <nav class="navbar header-navbar" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <div class="logo navbar-brand">
+            <a href="#" title="Bitspark"></a>
+          </div>
+          <button class='toggle-slide-left visible-xs collapsed navbar-toggle' type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><i class="fa fa-bars"></i></button>
+        </div>
 
-                <i class="fa fa-bell-o"></i>
-                <span class="badge bg-warning">3</span>
-            </a>
-            <ul class="dropdown-menu extended notification">
-                <li>
-                    <p>Notifications</p>
-                </li>
-                <li>
-                    <div class="alert alert-info clearfix">
-                        <span class="alert-icon"><i class="fa fa-bolt"></i></span>
-                        <div class="noti-info">
-                            <a href="#"> Server #1 overloaded.</a>
-                        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="navbar-right">
+              <nav class='nav-menu navbar-left main-nav trig-mob slide-menu-left'>
+                <ul class='list-unstyled'>
+                  <li>
+                    <a href="#" data-scroll="information">
+                      <div class="inside">
+                        <div class="backside"> About Us </div>
+                        <div class="frontside"> About Us </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" data-scroll="information">
+                      <div class="inside">
+                        <div class="backside"> Features </div>
+                        <div class="frontside"> Features </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" data-scroll="testimonials">
+                    <div class="inside">
+                      <div class="backside"> FAQ </div>
+                      <div class="frontside"> FAQ </div>
                     </div>
-                </li>
-                <li>
-                    <div class="alert alert-danger clearfix">
-                        <span class="alert-icon"><i class="fa fa-bolt"></i></span>
-                        <div class="noti-info">
-                            <a href="#"> Server #2 overloaded.</a>
-                        </div>
+                    </a>
+                  </li>
+<!--                  <li>
+                    <a href="#" data-scroll="gallery">
+                      <div class="inside">
+                        <div class="backside"> Gallery </div>
+                        <div class="frontside"> Gallery </div>
+                      </div>
+                    </a>
+                  </li> -->
+                  <li>
+                    <a data-toggle="modal" role="button" href="#myModal">
+                      <div class="inside">
+                        <div class="backside"> Contact </div>
+                        <div class="frontside"> Contact </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" data-scroll="testimonials">
+                    <div class="inside">
+                      <div class="backside"> Sign In </div>
+                      <div class="frontside"> Sign In </div>
                     </div>
-                </li>
-                <li>
-                    <div class="alert alert-success clearfix">
-                        <span class="alert-icon"><i class="fa fa-bolt"></i></span>
-                        <div class="noti-info">
-                            <a href="#"> Server #3 overloaded.</a>
-                        </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" data-scroll="testimonials">
+                    <div class="inside">
+                      <div class="backside"> Sign Up </div>
+                      <div class="frontside"> Sign Up </div>
                     </div>
-                </li>
-
-            </ul>
-        </li>
-        <!-- notification dropdown end -->
-    </ul>
-    <!--  notification end -->
-</div>
-<div class="top-nav clearfix">
-    <!--search & user info start-->
-    <ul class="nav pull-right top-menu">
-        <li>
-            <input type="text" class="form-control search" placeholder=" Search">
-        </li>
-        <!-- user login dropdown start-->
-        <li class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                <img alt="" src="images/avatar1_small.jpg">
-                <span class="username">John Doe</span>
-                <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu extended logout">
-                <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
-                <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
-                <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
-            </ul>
-        </li>
-        <!-- user login dropdown end -->
-        <li>
-            <div class="toggle-right-box">
-                <div class="fa fa-bars"></div>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+<!--              <div class="wr-soc">
+                <div class="header-social">
+                  <ul class='social-transform unstyled'>
+                  <li>
+                    <a href='#' target='blank' class='front'><div class="fa fa-facebook"></div></a>
+                  </li>
+                  <li>
+                    <a href='#' target='blank' class='front'><i class="fa fa-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href='#' target='blank' class='front'><i class="fa fa-google-plus"></i></a>
+                  </li>
+                  <li>
+                    <a href='#' target='blank' class='front'><i class='fa fa-vimeo-square'></i></a>
+                  </li>
+                  </ul>
+                </div>
+              </div> -->
             </div>
-        </li>
-    </ul>
-    <!--search & user info end-->
-</div>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+    </div>
+  </div>
 </header>
-<!--header end-->
-<!--sidebar start-->
-<aside>
-    <div id="sidebar" class="nav-collapse">
-        <!-- sidebar menu start-->
-        <div class="leftside-navigation">
-            <ul class="sidebar-menu" id="nav-accordion">
-                <li>
-                    <a class="active" href="index.html">
-                        <i class="fa fa-dashboard"></i>
-                        <span>Dashboard</span>
-                    </a>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-laptop"></i>
-                        <span>Layouts</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a href="boxed_page.html">Boxed Page</a></li>
-                        <li><a href="horizontal_menu.html">Horizontal Menu</a></li>
-                        <li><a href="language_switch.html">Language Switch Bar</a></li>
-                    </ul>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-book"></i>
-                        <span>UI Elements</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a href="general.html">General</a></li>
-                        <li><a href="buttons.html">Buttons</a></li>
-<li><a href="typography.html">Typography</a></li>
-                        <li><a href="widget.html">Widget</a></li>
-                        <li><a href="slider.html">Slider</a></li>
-                        <li><a href="tree_view.html">Tree View</a></li>
-                        <li><a href="nestable.html">Nestable</a></li>
-                        <li><a href="grids.html">Grids</a></li>
-                        <li><a href="calendar.html">Calender</a></li>
-                        <li><a href="draggable_portlet.html">Draggable Portlet</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="fontawesome.html">
-                        <i class="fa fa-bullhorn"></i>
-                        <span>Fontawesome </span>
-                    </a>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-th"></i>
-                        <span>Data Tables</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a href="basic_table.html">Basic Table</a></li>
-                        <li><a href="responsive_table.html">Responsive Table</a></li>
-                        <li><a href="dynamic_table.html">Dynamic Table</a></li>
-                        <li><a href="editable_table.html">Editable Table</a></li>
-                    </ul>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-tasks"></i>
-                        <span>Form Components</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a href="form_component.html">Form Elements</a></li>
-                        <li><a href="advanced_form.html">Advanced Components</a></li>
-                        <li><a href="form_wizard.html">Form Wizard</a></li>
-                        <li><a href="form_validation.html">Form Validation</a></li>
-                        <li><a href="file_upload.html">Muliple File Upload</a></li>
-
-                        <li><a href="dropzone.html">Dropzone</a></li>
-                        <li><a href="inline_editor.html">Inline Editor</a></li>
-
-                    </ul>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-envelope"></i>
-                        <span>Mail </span>
-                    </a>
-                    <ul class="sub">
-                        <li><a href="mail.html">Inbox</a></li>
-                        <li><a href="mail_compose.html">Compose Mail</a></li>
-                        <li><a href="mail_view.html">View Mail</a></li>
-                    </ul>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class=" fa fa-bar-chart-o"></i>
-                        <span>Charts</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a href="morris.html">Morris</a></li>
-                        <li><a href="chartjs.html">Chartjs</a></li>
-                        <li><a href="flot_chart.html">Flot Charts</a></li>
-                        <li><a href="c3_chart.html">C3 Chart</a></li>
-                    </ul>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class=" fa fa-bar-chart-o"></i>
-                        <span>Maps</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a href="google_map.html">Google Map</a></li>
-                        <li><a href="vector_map.html">Vector Map</a></li>
-                    </ul>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-glass"></i>
-                        <span>Extra</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a href="blank.html">Blank Page</a></li>
-                        <li><a href="lock_screen.html">Lock Screen</a></li>
-                        <li><a href="profile.html">Profile</a></li>
-                        <li><a href="invoice.html">Invoice</a></li>
-                        <li><a href="pricing_table.html">Pricing Table</a></li>
-                        <li><a href="timeline.html">Timeline</a></li>                    
-<li><a href="gallery.html">Media Gallery</a></li><li><a href="404.html">404 Error</a></li>
-                        <li><a href="500.html">500 Error</a></li>
-                        <li><a href="registration.html">Registration</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="login.html">
-                        <i class="fa fa-user"></i>
-                        <span>Login Page</span>
-                    </a>
-                </li>
-            </ul>            </div>
-        <!-- sidebar menu end-->
-    </div>
-</aside>
-<!--sidebar end-->
-<!--main content start-->
-<section id="main-content">
-<section class="wrapper">
-
-<!--mini statistics start-->
-<div class="row">
-    <div class="col-md-3">
-        <section class="panel">
-            <div class="panel-body">
-                <div class="top-stats-panel">
-                    <div class="gauge-canvas">
-                        <h4 class="widget-h">Monthly Expense</h4>
-                        <canvas width=160 height=100 id="gauge"></canvas>
-                    </div>
-                    <ul class="gauge-meta clearfix">
-                        <li id="gauge-textfield" class="pull-left gauge-value"></li>
-                        <li class="pull-right gauge-title">Safe</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </div>
-    <div class="col-md-3">
-        <section class="panel">
-            <div class="panel-body">
-                <div class="top-stats-panel">
-                    <div class="daily-visit">
-                        <h4 class="widget-h">Daily Visitors</h4>
-                        <div id="daily-visit-chart" style="width:100%; height: 100px; display: block">
-
-                        </div>
-                        <ul class="chart-meta clearfix">
-                            <li class="pull-left visit-chart-value">3233</li>
-                            <li class="pull-right visit-chart-title"><i class="fa fa-arrow-up"></i> 15%</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <div class="col-md-3">
-        <section class="panel">
-            <div class="panel-body">
-                <div class="top-stats-panel">
-                    <h4 class="widget-h">Top Advertise</h4>
-                    <div class="sm-pie">
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <div class="col-md-3">
-        <section class="panel">
-            <div class="panel-body">
-                <div class="top-stats-panel">
-                    <h4 class="widget-h">Daily Sales</h4>
-                    <div class="bar-stats">
-                        <ul class="progress-stat-bar clearfix">
-                            <li data-percent="50%"><span class="progress-stat-percent pink"></span></li>
-                            <li data-percent="90%"><span class="progress-stat-percent"></span></li>
-                            <li data-percent="70%"><span class="progress-stat-percent yellow-b"></span></li>
-                        </ul>
-                        <ul class="bar-legend">
-                            <li><span class="bar-legend-pointer pink"></span> New York</li>
-                            <li><span class="bar-legend-pointer green"></span> Los Angels</li>
-                            <li><span class="bar-legend-pointer yellow-b"></span> Dallas</li>
-                        </ul>
-                        <div class="daily-sales-info">
-                            <span class="sales-count">1200 </span> <span class="sales-label">Products Sold</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-</div>
-<!--mini statistics end-->
-<div class="row">
-    <div class="col-md-8">
-        <!--earning graph start-->
-        <section class="panel">
-            <header class="panel-heading">
-                Earning Graph <span class="tools pull-right">
-            <a href="javascript:;" class="fa fa-chevron-down"></a>
-            <a href="javascript:;" class="fa fa-cog"></a>
-            <a href="javascript:;" class="fa fa-times"></a>
-            </span>
-            </header>
-            <div class="panel-body">
-
-                <div id="graph-area" class="main-chart">
-                </div>
-                <div class="region-stats">
-                    <div class="row">
-                        <div class="col-md-7">
-                            <div class="region-earning-stats">
-                                This year total earning <span>$68,4545,454</span>
-                            </div>
-                            <ul class="clearfix location-earning-stats">
-                                <li class="stat-divider">
-                                    <span class="first-city">$734503</span>
-                                    Rocky Mt,NC </li>
-                                <li class="stat-divider">
-                                    <span class="second-city">$734503</span>
-                                    Dallas/FW,TX </li>
-                                <li>
-                                    <span class="third-city">$734503</span>
-                                    Millville,NJ </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-5">
-                            <div id="world-map" class="vector-stat">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--earning graph end-->
-    </div>
-    <div class="col-md-4">
-        <!--widget graph start-->
-        <section class="panel">
-            <div class="panel-body">
-                <div class="monthly-stats pink">
-                    <div class="clearfix">
-                        <h4 class="pull-left"> January 2013</h4>
-                        <!-- Nav tabs -->
-                        <div class="btn-group pull-right stat-tab">
-                            <a href="#line-chart" class="btn stat-btn active" data-toggle="tab"><i class="ico-stats"></i></a>
-                            <a href="#bar-chart" class="btn stat-btn" data-toggle="tab"><i class="ico-bars"></i></a>
-                        </div>
-                    </div>
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="line-chart">
-                            <div class="sparkline" data-type="line" data-resize="true" data-height="75" data-width="90%" data-line-width="1" data-min-spot-color="false" data-max-spot-color="false" data-line-color="#ffffff" data-spot-color="#ffffff" data-fill-color="" data-highlight-line-color="#ffffff" data-highlight-spot-color="#e1b8ff" data-spot-radius="3" data-data="[100,200,459,234,600,800,345,987,675,457,765]">
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="bar-chart">
-                            <div class="sparkline" data-type="bar" data-resize="true" data-height="75" data-width="90%" data-bar-color="#d4a7f5" data-bar-width="10" data-data="[300,200,500,700,654,987,457,300,876,454,788,300,200,500,700,654,987,457,300,876,454,788]"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="circle-sat">
-                    <ul>
-                        <li class="left-stat-label"><span class="sell-percent">60%</span><span>Direct Sell</span></li>
-                        <li><span class="epie-chart" data-percent="45">
-                        <span class="percent"></span>
-                        </span></li>
-                        <li class="right-stat-label"><span class="sell-percent">40%</span><span>Channel Sell</span></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <!--widget graph end-->
-        <!--widget graph start-->
-        <section class="panel">
-            <div class="panel-body">
-                <ul class="clearfix prospective-spark-bar">
-                    <li class="pull-left spark-bar-label">
-                        <span class="bar-label-value"> $18887</span>
-                        <span>Prospective Label</span>
-                    </li>
-                    <li class="pull-right">
-                        <div class="sparkline" data-type="bar" data-resize="true" data-height="40" data-width="90%" data-bar-color="#f6b0ae" data-bar-width="5" data-data="[300,200,500,700,654,987,457,300,876,454,788,300,200,500,700,654,987,457,300,876,454,788]"></div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <!--widget graph end-->
-        <!--widget weather start-->
-        <section class="weather-widget clearfix">
-            <div class="pull-left weather-icon">
-                <canvas id="icon1" width="60" height="60"></canvas>
-            </div>
-            <div>
-                <ul class="weather-info">
-                    <li class="weather-city">New York <i class="ico-location"></i></li>
-                    <li class="weather-cent"><span>18</span></li>
-                    <li class="weather-status">Rainy Day</li>
-                </ul>
-            </div>
-        </section>
-        <!--widget weather end-->
-    </div>
-</div>
-<!--mini statistics start-->
-<div class="row">
-    <div class="col-md-3">
-        <div class="mini-stat clearfix">
-            <span class="mini-stat-icon orange"><i class="fa fa-gavel"></i></span>
-            <div class="mini-stat-info">
-                <span>320</span>
-                New Order Received
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="mini-stat clearfix">
-            <span class="mini-stat-icon tar"><i class="fa fa-tag"></i></span>
-            <div class="mini-stat-info">
-                <span>22,450</span>
-                Copy Sold Today
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="mini-stat clearfix">
-            <span class="mini-stat-icon pink"><i class="fa fa-money"></i></span>
-            <div class="mini-stat-info">
-                <span>34,320</span>
-                Dollar Profit Today
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="mini-stat clearfix">
-            <span class="mini-stat-icon green"><i class="fa fa-eye"></i></span>
-            <div class="mini-stat-info">
-                <span>32720</span>
-                Unique Visitors
-            </div>
-        </div>
-    </div>
-</div>
-<!--mini statistics end-->
 
 
-<div class="row">
-    <div class="col-md-8">
-        <div class="event-calendar clearfix">
-            <div class="col-lg-7 calendar-block">
-                <div class="cal1 ">
-                </div>
+<!--===========================-->
+<!--==========Content==========-->
+<div class='main-wrapper content'>
+  <section class="relative big-slider">
+    <div id="form_slider" class='big-bxslider row' data-anchor="form_slider">
+      <ul class="form-bxslider xSlider list-unstyled">
+        <li class='firstslide'>
+          <div class="container relative body-slide">
+            <div class="list-forstart fin_1">
+              <h2 class='h-Bold'>Your Bitcoin Gateway in Asia</h2>
+              <p class='desc'>Vestibulum auctor aliquet lectus id rutrum. In hac habitasse platea dictumst. Ut luctus id turpis ac auctor. Morbi eleifend id arcu ac auctor nec tempor.</p>
+<!--              <ul class='ul-list-slider Open-sansR'>
+                <li>Curabitur Tempor Sapien</li>
+                <li>Maecenas Porttitor Ligula Adipiscing</li>
+                <li>Contests with $ 1.000.000 Magna Feugiat</li>
+              </ul> -->
             </div>
-            <div class="col-lg-5 event-list-block">
-                <div class="cal-day">
-                    <span>Today</span>
-                    Friday
-                </div>
-                <ul class="event-list">
-                    <li>Lunch with jhon @ 3:30 <a href="#" class="event-close"><i class="ico-close2"></i></a></li>
-                    <li>Coffee meeting with Lisa @ 4:30 <a href="#" class="event-close"><i class="ico-close2"></i></a></li>
-                    <li>Skypee conf with patrick @ 5:45 <a href="#" class="event-close"><i class="ico-close2"></i></a></li>
-                    <li>Gym @ 7:00 <a href="#" class="event-close"><i class="ico-close2"></i></a></li>
-                    <li>Dinner with daniel @ 9:30 <a href="#" class="event-close"><i class="ico-close2"></i></a></li>
-
-                </ul>
-                <input type="text" class="form-control evnt-input" placeholder="NOTES">
+            <div class="clearfix"></div>
+            <div class="fin_2 dv2 ver2">
+              <a href="#" class='btn submit no-mar dark-blue-btn a-trig'>Sign In</a>
+              <a href="#" data-toggle="modal" role="button" class='btn submit a-trig glam-btn'>Sign Up</a>
             </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <!--chat start-->
-        <section class="panel">
-            <header class="panel-heading">
-                Chat <span class="tools pull-right">
-            <a href="javascript:;" class="fa fa-chevron-down"></a>
-            <a href="javascript:;" class="fa fa-cog"></a>
-            <a href="javascript:;" class="fa fa-times"></a>
-            </span>
-            </header>
-            <div class="panel-body">
-                <div class="chat-conversation">
-                    <ul class="conversation-list">
-                        <li class="clearfix">
-                            <div class="chat-avatar">
-                                <img src="images/chat-user-thumb.png" alt="male">
-                                <i>10:00</i>
-                            </div>
-                            <div class="conversation-text">
-                                <div class="ctext-wrap">
-                                    <i>John Carry</i>
-                                    <p>
-                                        Hello!
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="clearfix odd">
-                            <div class="chat-avatar">
-                                <img src="images/chat-user-thumb-f.png" alt="female">
-                                <i>10:00</i>
-                            </div>
-                            <div class="conversation-text">
-                                <div class="ctext-wrap">
-                                    <i>Lisa Peterson</i>
-                                    <p>
-                                        Hi, How are you? What about our next meeting?
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="clearfix">
-                            <div class="chat-avatar">
-                                <img src="images/chat-user-thumb.png" alt="male">
-                                <i>10:00</i>
-                            </div>
-                            <div class="conversation-text">
-                                <div class="ctext-wrap">
-                                    <i>John Carry</i>
-                                    <p>
-                                        Yeah everything is fine
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="clearfix odd">
-                            <div class="chat-avatar">
-                                <img src="images/chat-user-thumb-f.png" alt="female">
-                                <i>10:00</i>
-                            </div>
-                            <div class="conversation-text">
-                                <div class="ctext-wrap">
-                                    <i>Lisa Peterson</i>
-                                    <p>
-                                        Wow that's great
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="row">
-                        <div class="col-xs-9">
-                            <input type="text" class="form-control chat-input" placeholder="Enter your text">
-                        </div>
-                        <div class="col-xs-3 chat-send">
-                            <button type="submit" class="btn btn-default">Send</button>
-                        </div>
-                    </div>
-                </div>
+          </div>
+<!--          <div class="img-slider slide-man1 fin_2"></div>
+ -->        </li>
+<!--        <li class='secondslide'>
+          <div class="container relative body-slide">
+            <div class="list-forstart fin_1">
+              <h2 class='h-Bold'>Your Payment Gateway in Asia</h2>
+              <p class='desc'>Ut luctus id turpis ac auctor. Quisque vel neque quis nulla scelerisque cursus sed at lorem. Integer at vehicula est.</p>
+              <ul class='ul-list-slider Open-sansR'>
+                <li>Curabitur Tempor Sapien</li>
+                <li>Contests with $ 1.000.000 Magna Feugiat</li>
+                <li>Morbi Varius Egestas</li>
+              </ul>
             </div>
-        </section>
-        <!--chat end-->
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-8">
-        <section class="panel">
-            <div class="wdgt-row">
-                <img src="images/weather_image.jpg" height="243" alt="">
-                <div class="wdt-head">
-                    weather forecast
-                </div>
-                <div class="country-select">
-                    <select class="styled">
-                        <option>New York </option>
-                        <option>London </option>
-                        <option>Australia </option>
-                        <option>China </option>
-                        <option>Canada </option>
-                    </select>
-                </div>
+            <div class="clearfix"></div>
+            <div class="fin_2 dv2 ver2">
+              <a href="http://footage.shutterstock.com/clip-1881004-stock-footage-slo-motion-lemon-falling-into-wedges-against-black-drop.html?src=rel/1878937:2" class='btn submit no-mar dark-blue-btn a-trig'>Take a Demo</a>
+              <a href="#myModalform" data-toggle="modal" role="button" class='btn submit a-trig glam-btn'>Register Now</a>
             </div>
-
-            <div class="panel-body">
-                <div class="row weather-full-info">
-                    <div class="col-md-3 today-status">
-                        <h1>Today</h1>
-                        <i class=" ico-cloudy "></i>
-                        <div class="degree">37</div>
-                    </div>
-                    <div class="col-md-9">
-                        <ul>
-                            <li>
-                                <h2>Tomorrow</h2>
-                                <i class=" ico-cloudy text-primary"></i>
-                                <div class="statistics">32</div>
-                            </li>
-                            <li>
-                                <h2>Mon</h2>
-                                <i class=" ico-rainy2 text-danger"></i>
-                                <div class="statistics">40</div>
-                            </li>
-                            <li>
-                                <h2>Tue</h2>
-                                <i class=" ico-lightning3 text-info"></i>
-                                <div class="statistics">25</div>
-                            </li>
-                            <li>
-                                <h2>Wed</h2>
-                                <i class=" ico-sun3 text-success"></i>
-                                <div class="statistics">37</div>
-                            </li>
-                            <li>
-                                <h2>Thu</h2>
-                                <i class=" ico-snowy3 text-warning"></i>
-                                <div class="statistics">15</div>
-                            </li>
-                            <li>
-                                <h2>Fri</h2>
-                                <i class=" ico-cloudy "></i>
-                                <div class="statistics">21</div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-    </div>
-
-    <div class="col-md-4">
-        <div class="profile-nav alt">
-            <section class="panel">
-                <div class="user-heading alt clock-row terques-bg">
-                    <h1>December 14</h1>
-                    <p class="text-left">2014, Friday</p>
-                    <p class="text-left">7:53 PM</p>
-                </div>
-                <ul id="clock">
-                    <li id="sec"></li>
-                    <li id="hour"></li>
-                    <li id="min"></li>
-                </ul>
-
-                <ul class="clock-category">
-                    <li>
-                        <a href="#" class="active">
-                            <i class="ico-clock2"></i>
-                            <span>Clock</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="ico-alarm2 "></i>
-                            <span>Alarm</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="ico-stopwatch"></i>
-                            <span>Stop watch</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class=" ico-clock2 "></i>
-                            <span>Timer</span>
-                        </a>
-                    </li>
-                </ul>
-
-            </section>
-
-        </div>
-    </div>
-</div>
-<div class="row">
-<div class="col-md-6">
-    <!--notification start-->
-    <section class="panel">
-        <header class="panel-heading">
-            Notification <span class="tools pull-right">
-            <a href="javascript:;" class="fa fa-chevron-down"></a>
-            <a href="javascript:;" class="fa fa-cog"></a>
-            <a href="javascript:;" class="fa fa-times"></a>
-            </span>
-        </header>
-        <div class="panel-body">
-            <div class="alert alert-info clearfix">
-                <span class="alert-icon"><i class="fa fa-envelope-o"></i></span>
-                <div class="notification-info">
-                    <ul class="clearfix notification-meta">
-                        <li class="pull-left notification-sender"><span><a href="#">Jonathan Smith</a></span> send you a mail </li>
-                        <li class="pull-right notification-time">1 min ago</li>
-                    </ul>
-                    <p>
-                        Urgent meeting for next proposal
-                    </p>
-                </div>
-            </div>
-            <div class="alert alert-danger">
-                <span class="alert-icon"><i class="fa fa-facebook"></i></span>
-                <div class="notification-info">
-                    <ul class="clearfix notification-meta">
-                        <li class="pull-left notification-sender"><span><a href="#">Jonathan Smith</a></span> mentioned you in a post </li>
-                        <li class="pull-right notification-time">7 Hours Ago</li>
-                    </ul>
-                    <p>
-                        Very cool photo jack
-                    </p>
-                </div>
-            </div>
-            <div class="alert alert-success ">
-                <span class="alert-icon"><i class="fa fa-comments-o"></i></span>
-                <div class="notification-info">
-                    <ul class="clearfix notification-meta">
-                        <li class="pull-left notification-sender">You have 5 message unread</li>
-                        <li class="pull-right notification-time">1 min ago</li>
-                    </ul>
-                    <p>
-                        <a href="#">Anjelina Mewlo, Jack Flip</a> and <a href="#">3 others</a>
-                    </p>
-                </div>
-            </div>
-            <div class="alert alert-warning ">
-                <span class="alert-icon"><i class="fa fa-bell-o"></i></span>
-                <div class="notification-info">
-                    <ul class="clearfix notification-meta">
-                        <li class="pull-left notification-sender">Domain Renew Deadline 7 days ahead</li>
-                        <li class="pull-right notification-time">5 Days Ago</li>
-                    </ul>
-                    <p>
-                        Next 5 July Thursday is the last day
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--notification end-->
-</div>
-<div class="col-md-6">
-    <!--todolist start-->
-    <section class="panel">
-        <header class="panel-heading">
-            To Do List <span class="tools pull-right">
-            <a href="javascript:;" class="fa fa-chevron-down"></a>
-            <a href="javascript:;" class="fa fa-cog"></a>
-            <a href="javascript:;" class="fa fa-times"></a>
-            </span>
-        </header>
-        <div class="panel-body">
-            <ul class="to-do-list" id="sortable-todo">
-                <li class="clearfix">
-                    <span class="drag-marker">
-                    <i></i>
-                    </span>
-                    <div class="todo-check pull-left">
-                        <input type="checkbox" value="None" id="todo-check"/>
-                        <label for="todo-check"></label>
-                    </div>
-                    <p class="todo-title">
-                        Donec quam libero, rutrum non gravida ut
-                    </p>
-                    <div class="todo-actionlist pull-right clearfix">
-                        <a href="#" class="todo-done"><i class="fa fa-check"></i></a>
-                        <a href="#" class="todo-edit"><i class="ico-pencil"></i></a>
-                        <a href="#" class="todo-remove"><i class="ico-close"></i></a>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <span class="drag-marker">
-                    <i></i>
-                    </span>
-                    <div class="todo-check pull-left">
-                        <input type="checkbox" value="None" id="todo-check1"/>
-                        <label for="todo-check1"></label>
-                    </div>
-                    <p class="todo-title">
-                        Donec quam libero, rutrum non gravida
-                    </p>
-                    <div class="todo-actionlist pull-right clearfix">
-                        <a href="#" class="todo-done"><i class="fa fa-check"></i></a>
-                        <a href="#" class="todo-edit"><i class="ico-pencil"></i></a>
-                        <a href="#" class="todo-remove"><i class="ico-close"></i></a>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <span class="drag-marker">
-                    <i></i>
-                    </span>
-                    <div class="todo-check pull-left">
-                        <input type="checkbox" value="None" id="todo-check2"/>
-                        <label for="todo-check2"></label>
-                    </div>
-                    <p class="todo-title">
-                        Donec quam libero, rutrum non gravida ut
-                    </p>
-                    <div class="todo-actionlist pull-right clearfix">
-                        <a href="#" class="todo-done"><i class="fa fa-check"></i></a>
-                        <a href="#" class="todo-edit"><i class="ico-pencil"></i></a>
-                        <a href="#" class="todo-remove"><i class="ico-close"></i></a>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <span class="drag-marker">
-                    <i></i>
-                    </span>
-                    <div class="todo-check pull-left">
-                        <input type="checkbox" value="None" id="todo-check3"/>
-                        <label for="todo-check3"></label>
-                    </div>
-                    <p class="todo-title">
-                        Donec quam libero, rutrum non gravida ut
-                    </p>
-                    <div class="todo-actionlist pull-right clearfix">
-                        <a href="#" class="todo-done"><i class="fa fa-check"></i></a>
-                        <a href="#" class="todo-edit"><i class="ico-pencil"></i></a>
-                        <a href="#" class="todo-remove"><i class="ico-close"></i></a>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <span class="drag-marker">
-                    <i></i>
-                    </span>
-                    <div class="todo-check pull-left">
-                        <input type="checkbox" value="None" id="todo-check4" />
-                        <label for="todo-check4"></label>
-                    </div>
-                    <p class="todo-title">
-                        Donec quam libero, rutrum non gravida ut
-                    </p>
-                    <div class="todo-actionlist pull-right clearfix">
-                        <a href="#" class="todo-done"><i class="fa fa-check"></i></a>
-                        <a href="#" class="todo-edit"><i class="ico-pencil"></i></a>
-                        <a href="#" class="todo-remove"><i class="ico-close"></i></a>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <span class="drag-marker">
-                    <i></i>
-                    </span>
-                    <div class="todo-check pull-left">
-                        <input type="checkbox" value="None" id="todo-check5"/>
-                        <label for="todo-check5"></label>
-                    </div>
-                    <p class="todo-title">
-                        Donec quam libero, rutrum non gravida ut
-                    </p>
-                    <div class="todo-actionlist pull-right clearfix">
-                        <a href="#" class="todo-done"><i class="fa fa-check"></i></a>
-                        <a href="#" class="todo-edit"><i class="ico-pencil"></i></a>
-                        <a href="#" class="todo-remove"><i class="ico-close"></i></a>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <span class="drag-marker">
-                    <i></i>
-                    </span>
-                    <div class="todo-check pull-left">
-                        <input type="checkbox" value="None" id="todo-check6" />
-                        <label for="todo-check6"></label>
-                    </div>
-                    <p class="todo-title">
-                        Donec quam libero, rutrum non gravida ut
-                    </p>
-                    <div class="todo-actionlist pull-right clearfix">
-                        <a href="#" class="todo-done"><i class="fa fa-check"></i></a>
-                        <a href="#" class="todo-edit"><i class="ico-pencil"></i></a>
-                        <a href="#" class="todo-remove"><i class="ico-close"></i></a>
-                    </div>
-                </li>
-            </ul>
-            <div class="todo-action-bar">
-                <div class="row">
-                    <div class="col-xs-4 btn-todo-select">
-                        <button type="submit" class="btn btn-default"><i class="fa fa-check"></i> Select All</button>
-                    </div>
-                    <div class="col-xs-4 todo-search-wrap">
-                        <input type="text" class="form-control search todo-search pull-right" placeholder=" Search">
-                    </div>
-                    <div class="col-xs-4 btn-add-task">
-                        <button type="submit" class="btn btn-default btn-primary"><i class="fa fa-plus"></i> Add Task</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--todolist end-->
-</div>
-</div>
-</section>
-</section>
-<!--main content end-->
-<!--right sidebar start-->
-<div class="right-sidebar">
-<div class="search-row">
-    <input type="text" placeholder="Search" class="form-control">
-</div>
-<div class="right-stat-bar">
-<ul class="right-side-accordion">
-<li class="widget-collapsible">
-    <a href="#" class="head widget-head red-bg active clearfix">
-        <span class="pull-left">work progress (5)</span>
-        <span class="pull-right widget-collapse"><i class="ico-minus"></i></span>
-    </a>
-    <ul class="widget-container">
-        <li>
-            <div class="prog-row side-mini-stat clearfix">
-                <div class="side-graph-info">
-                    <h4>Target sell</h4>
-                    <p>
-                        25%, Deadline 12 june 13
-                    </p>
-                </div>
-                <div class="side-mini-graph">
-                    <div class="target-sell">
-                    </div>
-                </div>
-            </div>
-            <div class="prog-row side-mini-stat">
-                <div class="side-graph-info">
-                    <h4>product delivery</h4>
-                    <p>
-                        55%, Deadline 12 june 13
-                    </p>
-                </div>
-                <div class="side-mini-graph">
-                    <div class="p-delivery">
-                        <div class="sparkline" data-type="bar" data-resize="true" data-height="30" data-width="90%" data-bar-color="#39b7ab" data-bar-width="5" data-data="[200,135,667,333,526,996,564,123,890,564,455]">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="prog-row side-mini-stat">
-                <div class="side-graph-info payment-info">
-                    <h4>payment collection</h4>
-                    <p>
-                        25%, Deadline 12 june 13
-                    </p>
-                </div>
-                <div class="side-mini-graph">
-                    <div class="p-collection">
-						<span class="pc-epie-chart" data-percent="45">
-						<span class="percent"></span>
-						</span>
-                    </div>
-                </div>
-            </div>
-            <div class="prog-row side-mini-stat">
-                <div class="side-graph-info">
-                    <h4>delivery pending</h4>
-                    <p>
-                        44%, Deadline 12 june 13
-                    </p>
-                </div>
-                <div class="side-mini-graph">
-                    <div class="d-pending">
-                    </div>
-                </div>
-            </div>
-            <div class="prog-row side-mini-stat">
-                <div class="col-md-12">
-                    <h4>total progress</h4>
-                    <p>
-                        50%, Deadline 12 june 13
-                    </p>
-                    <div class="progress progress-xs mtop10">
-                        <div style="width: 50%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" role="progressbar" class="progress-bar progress-bar-info">
-                            <span class="sr-only">50% Complete</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
+          <div class="img-slider slide-man2 fin_2"></div>
         </li>
-    </ul>
-</li>
-<li class="widget-collapsible">
-    <a href="#" class="head widget-head terques-bg active clearfix">
-        <span class="pull-left">contact online (5)</span>
-        <span class="pull-right widget-collapse"><i class="ico-minus"></i></span>
-    </a>
-    <ul class="widget-container">
-        <li>
-            <div class="prog-row">
-                <div class="user-thumb">
-                    <a href="#"><img src="images/avatar1_small.jpg" alt=""></a>
-                </div>
-                <div class="user-details">
-                    <h4><a href="#">Jonathan Smith</a></h4>
-                    <p>
-                        Work for fun
-                    </p>
-                </div>
-                <div class="user-status text-danger">
-                    <i class="fa fa-comments-o"></i>
-                </div>
+        <li class='thirstslide'>
+          <div class="container relative body-slide">
+            <div class="list-forstart fin_1">
+              <h2 class='h-Bold'>For the Best</h2>
+              <p class='desc'>Donec quis leo varius, consectetur massa vitae, adipiscing magna. Cum sociis natoque penatibus et magnis dis parturient montes </p>
+              <ul class='ul-list-slider Open-sansR'>
+                <li>Curabitur Tempor Sapien</li>
+                <li>Maecenas Porttitor Ligula Adipiscing</li>
+                <li>Contests with $ 1.000.000 Magna Feugiat</li>
+                <li>Morbi Varius Egestas</li>
+              </ul>
             </div>
-            <div class="prog-row">
-                <div class="user-thumb">
-                    <a href="#"><img src="images/avatar1.jpg" alt=""></a>
-                </div>
-                <div class="user-details">
-                    <h4><a href="#">Anjelina Joe</a></h4>
-                    <p>
-                        Available
-                    </p>
-                </div>
-                <div class="user-status text-success">
-                    <i class="fa fa-comments-o"></i>
-                </div>
+            <div class="clearfix"></div>
+            <div class="fin_2 dv2 ver2">
+              <a href="http://footage.shutterstock.com/clip-1881004-stock-footage-slo-motion-lemon-falling-into-wedges-against-black-drop.html?src=rel/1878937:2" class='btn submit no-mar dark-blue-btn a-trig'>Take a Demo</a>
+              <a href="#myModalform" data-toggle="modal" role="button" class='btn submit a-trig glam-btn'>Register Now</a>
             </div>
-            <div class="prog-row">
-                <div class="user-thumb">
-                    <a href="#"><img src="images/chat-avatar2.jpg" alt=""></a>
-                </div>
-                <div class="user-details">
-                    <h4><a href="#">John Doe</a></h4>
-                    <p>
-                        Away from Desk
-                    </p>
-                </div>
-                <div class="user-status text-warning">
-                    <i class="fa fa-comments-o"></i>
-                </div>
-            </div>
-            <div class="prog-row">
-                <div class="user-thumb">
-                    <a href="#"><img src="images/avatar1_small.jpg" alt=""></a>
-                </div>
-                <div class="user-details">
-                    <h4><a href="#">Mark Henry</a></h4>
-                    <p>
-                        working
-                    </p>
-                </div>
-                <div class="user-status text-info">
-                    <i class="fa fa-comments-o"></i>
-                </div>
-            </div>
-            <div class="prog-row">
-                <div class="user-thumb">
-                    <a href="#"><img src="images/avatar1.jpg" alt=""></a>
-                </div>
-                <div class="user-details">
-                    <h4><a href="#">Shila Jones</a></h4>
-                    <p>
-                        Work for fun
-                    </p>
-                </div>
-                <div class="user-status text-danger">
-                    <i class="fa fa-comments-o"></i>
-                </div>
-            </div>
-            <p class="text-center">
-                <a href="#" class="view-btn">View all Contacts</a>
-            </p>
+          </div>
+          <div class="img-slider slide-man3 fin_2"></div>
         </li>
-    </ul>
-</li>
-<li class="widget-collapsible">
-    <a href="#" class="head widget-head purple-bg active">
-        <span class="pull-left"> recent activity (3)</span>
-        <span class="pull-right widget-collapse"><i class="ico-minus"></i></span>
-    </a>
-    <ul class="widget-container">
-        <li>
-            <div class="prog-row">
-                <div class="user-thumb rsn-activity">
-                    <i class="fa fa-clock-o"></i>
-                </div>
-                <div class="rsn-details ">
-                    <p class="text-muted">
-                        just now
-                    </p>
-                    <p>
-                        <a href="#">Jim Doe </a>Purchased new equipments for zonal office setup
-                    </p>
-                </div>
-            </div>
-            <div class="prog-row">
-                <div class="user-thumb rsn-activity">
-                    <i class="fa fa-clock-o"></i>
-                </div>
-                <div class="rsn-details ">
-                    <p class="text-muted">
-                        2 min ago
-                    </p>
-                    <p>
-                        <a href="#">Jane Doe </a>Purchased new equipments for zonal office setup
-                    </p>
-                </div>
-            </div>
-            <div class="prog-row">
-                <div class="user-thumb rsn-activity">
-                    <i class="fa fa-clock-o"></i>
-                </div>
-                <div class="rsn-details ">
-                    <p class="text-muted">
-                        1 day ago
-                    </p>
-                    <p>
-                        <a href="#">Jim Doe </a>Purchased new equipments for zonal office setup
-                    </p>
-                </div>
-            </div>
-        </li>
-    </ul>
-</li>
-<li class="widget-collapsible">
-    <a href="#" class="head widget-head yellow-bg active">
-        <span class="pull-left"> shipment status</span>
-        <span class="pull-right widget-collapse"><i class="ico-minus"></i></span>
-    </a>
-    <ul class="widget-container">
-        <li>
-            <div class="col-md-12">
-                <div class="prog-row">
-                    <p>
-                        Full sleeve baby wear (SL: 17665)
-                    </p>
-                    <div class="progress progress-xs mtop10">
-                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                            <span class="sr-only">40% Complete</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="prog-row">
-                    <p>
-                        Full sleeve baby wear (SL: 17665)
-                    </p>
-                    <div class="progress progress-xs mtop10">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-                            <span class="sr-only">70% Completed</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-    </ul>
-</li>
-</ul>
+      </ul>
+    </div> -->
+  </section>
 
+  <section class='dark-blue'>
+    <div class="container make-row">
+      <div class="row">
+<!--        <div class="col-md-3 col-sm-6 make-md">
+          <h4 class='division-h sem-h' id='animIt1'>Next seminar</h4>
+        </div> -->
+
+        <ul class='list-unstyled seminars'>
+          <li id='animIt2' class='col-md-4 col-sm-8'>
+            <div class="wr-item">
+              <i class="fa fa-lock"></i>
+              <div class="media">
+                <h4 class='division-h'>Secure</h4>
+                <span>We keep your coins safe with industry leading 100% Codl Stroage. No fractional reserve and fully auditable balances.</span>
+              </div>
+            </div>
+          </li>
+          <li id='animIt3' class='col-md-4 col-sm-8'>
+            <div class="wr-item">
+              <i class="fa fa-cog"></i>
+              <div class="media">
+                <h4 class='division-h'>Easy to Use</h4>
+                <span>We think Bitcoin shouldn't be hard. That's why we make it easier than ever to use your coins anywhere, every day on any platform.</span>
+              </div>
+            </div>
+          </li>
+          <li id='animIt4' class='col-md-4 col-sm-8'>
+            <div class="wr-item">
+              <i class="fa fa-map-marker"></i>
+              <div class="media">
+                <h4 class='division-h'>Low Fees</h4>
+                <span>Don't get stuck paying bank fees for any longer. Bitspark at can conduct trading, payment processing, and remittances.</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" data-anchor="features">
+    <div class="spacer6"></div>
+      <h2 class='text-center xxh-Bold'>About Us</h2>
+      <h3 class='text-center xmedium-h'>Your main Features</h3>
+      <div class="row trainings" id='trainings'>
+        <div class="col-md-3 col-xs-6 hov1">
+          <figure class='thumbnails'>
+            <i class='fa fa-shield'></i>
+          </figure>
+          <h4 class='xxsmall-h text-center transition-h'>Yearly Programs Upgrades</h4>
+          <div class="full-text">
+            Nulla ornare tortor quis rhoncus vulputate. Suspendisse commodo fringilla tellus vitae facilisis.
+          </div>
+        </div>
+
+        <div class="col-md-3 col-xs-6 hov2">
+          <figure class='thumbnails'>
+            <i class='fa fa-heart-o'></i>
+          </figure>
+          <h4 class='xxsmall-h text-center transition-h'>Best Learning Programs</h4>
+          <div class="full-text">
+            Nulla ornare tortor quis rhoncus vulputate. Quisque vehicula quis sapien a accumsan
+          </div>
+        </div>
+
+        <div class="col-md-3 col-xs-6 hov3">
+          <figure class='thumbnails'>
+            <i class='fa fa-refresh'></i>
+          </figure>
+          <h4 class='xxsmall-h text-center transition-h'>100% Money Back</h4>
+          <div class="full-text">
+            Nulla ornare tortor quis rhoncus vulputate. Fusce enim erat, volutpat id nisi quis, blandit sodales est
+          </div>
+        </div>
+
+        <div class="col-md-3 col-xs-6 hov4">
+          <figure class='thumbnails'>
+            <i class='fa fa-book'></i>
+          </figure>
+          <h4 class='xxsmall-h text-center transition-h'>Small groups, Individual Learning</h4>
+          <div class="full-text">
+            Nulla ornare tortor quis rhoncus vulputate. Vivamus a enim
+          </div>
+        </div>
+      </div>
+    <div class="offsetY-4"></div>
+  </section>
+
+  <section class="bg-darkblue">
+    <div class="container make-row" data-anchor="information">
+      <div class="row">
+        <div class="col-sm-6 media-wr" id='animIt5'>
+          <figure class='media-news'>
+            <a href="img/iphonehand.png" class="group3" title='There can be written anything'>
+              <img src="img/iphonehand.png" alt="alt..." >
+              <i class="zoom-icoBw"></i>
+            </a>
+          </figure>
+        </div>
+
+        <div class="col-sm-6" id='animIt6'>
+          <h2 class='xh-Bold'>BUY AND SELL</h2>
+          <div class="excerpt">
+            We think Bitcoin trading shouldn't be a trade-off. We are designing a best in class platform with multiple deposit and withdrawal mechanisms, great charts, leveraged orders, slick API, multiple currencies and great support.
+          </div>
+          <!-- <a href="#" class='more'>
+            <div class="inside">
+              <div class="backside"> View more Videos </div>
+              <div class="frontside"> View more Videos </div>
+            </div>
+          </a> -->
+        </div>
+      </div>
+      <div class="spacer2"></div>
+    </div>
+
+    <div class="container make-row">
+      <div class="row">
+        <div class="col-sm-6" id='animIt7'>
+          <h2 class='xh-Bold'>MERCHANT FRIENDLY</h2>
+          <div class="excerpt">
+            As Bitcoin continues to grow, we provide the tools for your business to grow with it. Forget credit card fees, we are your low cost payment processor and can provide transaction analytics, same day settlement and free marketing on our Bizmap, best of all - It's free to sign up and it's easy to get started!
+          </div>
+        <!--  <a href="#" class='more'>
+            <div class="inside">
+              <div class="backside"> View more Videos </div>
+              <div class="frontside"> View more Videos </div>
+            </div>
+          </a> -->
+          <div class="spacer2"></div>
+        </div>
+
+        <div class="col-sm-6 media-wr" id='animIt8'>
+          <figure class='media-news'>
+            <a href="img/support.png" class="group3" title='There can be written anything'>
+              <img src="img/support.png" alt="alt..." >
+              <i class="zoom-icoBw"></i>
+            </a>
+          </figure>
+        </div>
+      </div>
+      <div class="spacer2"></div>
+    </div>
+
+    <div class="container make-row">
+      <div class="row">
+        <div class="col-sm-6 media-wr" id='animIt9'>
+          <figure class='media-news'>
+            <a href="img/map.png" class="group3" title='This is title text'>
+              <img src="img/map.png" alt="alt..." >
+              <i class="zoom-icoBw"></i>
+            </a>
+          </figure>
+        </div>
+
+        <div class="col-sm-6" id='animIt10'>
+          <h2 class='xh-Bold'>REMITTANCES</h2>
+          <div class="excerpt">
+            At Bitspark we think sending money overseas should be cheap and easy. That's why we provide the means to send moeny overseas at the click of a button. Using our multi-platform App, you can remit money to an overseas bank account and send money to other Bitspark users for free, anytime, anwhere!
+          </div>
+<!--          <a href="#" class='more'>
+            <div class="inside">
+              <div class="backside"> View Training Program (pdf - 453K) </div>
+              <div class="frontside"> View Training Program (pdf - 453K) </div>
+            </div>
+          </a> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container tables" id='about'>
+    <h2 class='text-center xxh-Bold'>We have some Special Bundles for you</h2>
+    <h3 class='text-center xmedium-h'>Your main Features</h3>
+
+    <div class='auto-x'>
+      <div class="row">
+        <div class="col-sm-4 noR-border table-offers" id='animIt11'>
+          <table class='table package-services not-favorable basic'>
+            <caption class='noR-border'>Basic</caption>
+             <thead>
+              <tr>
+                <td><b><sup>$</sup>99</b>.95</td>
+              </tr>
+             </thead>
+            <tbody>
+              <tr>
+                <td>Morbi Vel Aliquet Arcu</td>
+              </tr>
+              <tr>
+                <td>300 Aenean Hendrerit Tempor <br> Quisque Lectus Leo</td>
+              </tr>
+              <tr>
+                <td>200 Vestibulum Nisi Metus</td>
+              </tr>
+              <tr class='lastTr'>
+                <td><a class='btn buy-now' href='#'>Buy Now</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-sm-4 profitable table-offers" id='animIt13'>
+          <table class='table package-services business'>
+            <caption>Business</caption>
+             <thead>
+              <tr>
+                <td><b><sup>$</sup>499</b>.95</td>
+              </tr>
+             </thead>
+            <tbody>
+              <tr>
+                <td>Morbi vel aliquet arcu</td>
+              </tr>
+              <tr>
+                <td>4×300 Aenean Hendrerit Tempor <br> Quisque Lectus Leo</td>
+              </tr>
+              <tr>
+                <td>4×300 Vestibulum Nisi</td>
+              </tr>
+              <tr>
+                <td>4×300 Aenean Hendrerit Tempor</td>
+              </tr>
+              <tr>
+                <td>Vitae Pretium</td>
+              </tr>
+              <tr class='lastTr'>
+                <td><a class='btn buy-now offsetY-5' href='#'>Buy Now</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class='col-sm-4 noL-border table-offers' id='animIt12'>
+          <table class='table package-services not-favorable premium'>
+            <caption class='noL-border'>Premium</caption>
+             <thead>
+              <tr>
+                <td><b><sup>$</sup>799</b>.95</td>
+              </tr>
+             </thead>
+            <tbody>
+              <tr>
+                <td>Morbi vel aliquet arcu</td>
+              </tr>
+              <tr>
+                <td>8×300 Aenean Hendrerit Tempor <br> Quisque Lectus Leo</td>
+              </tr>
+              <tr>
+                <td>12×300 Vestibulum Nisi</td>
+              </tr>
+              <tr>
+                <td>8×300 Aenean Hendrerit Tempor</td>
+              </tr>
+              <tr>
+                <td>Vitae Pretium</td>
+              </tr>
+              <tr class='lastTr'>
+                <td><a class='btn buy-now offsetY-6' href='#'>Buy Now</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="aboutUs_slider" data-anchor="testimonials">
+    <h3 class='slide-title text-center'>What people say about us?</h3>
+    <h4 class='xxmedium-h text-center'>Testimonals of our Customers </h4>
+    <div class="container">
+      <ul class="aboutUs-slider unstyled">
+        <li>
+          <figure class="thumbnail">
+            <a href="#">
+              <img src="img/staticks/user1.png" alt="img">
+            </a>
+          </figure>
+          <div class="quote">
+          Aenean mollis tortor placerat mauris ornare suscipit. Praesent vitae faucibus sem. Nulla facilisi. Suspendisse quam dolor, suscipit tincidunt venenatis malesuada, interdum eu erat. Donec tempor tristique
+          </div>
+          <span class="author">John Doe (SEO of LLF Corp.)</span>
+        </li>
+        <li>
+          <figure class="thumbnail">
+            <a href="#">
+              <img src="img/staticks/user1.png" alt="img">
+            </a>
+          </figure>
+          <div class="quote">
+          Aenean mollis tortor placerat mauris ornare suscipit. Praesent vitae faucibus sem. Nulla facilisi. Suspendisse quam dolor, suscipit tincidunt venenatis malesuada, interdum eu erat. Donec tempor tristique
+          </div>
+          <span class="author">John Doe (SEO of LLF Corp.)</span>
+        </li>
+        <li>
+          <figure class="thumbnail">
+            <a href="#">
+              <img src="img/staticks/user1.png" alt="img">
+            </a>
+          </figure>
+          <div class="quote">
+          Aenean mollis tortor placerat mauris ornare suscipit. Praesent vitae faucibus sem. Nulla facilisi. Suspendisse quam dolor, suscipit tincidunt venenatis malesuada, interdum eu erat. Donec tempor tristique
+          </div>
+          <span class="author">John Doe (SEO of LLF Corp.)</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="container make-row" data-anchor="gallery">
+    <h2 class='text-center xxh-Bold'>See Gallery from Last Event</h2>
+    <h3 class='text-center xmedium-h'>Your main Features</h3>
+
+    <div class="row" id='gallery'>
+      <div class="col-md-4 col-sm-6 animIt14">
+        <figure class='media-news'>
+          <a href="img/staticks/fullsize/img_1.jpg" class="group2 bwWrapper">
+            <img src="img/staticks/pop1.jpg" alt="alt..." >
+            <i class="zoom-icoBw"></i>
+          </a>
+        </figure>
+      </div>
+
+      <div class="col-md-4 col-sm-6 animIt14">
+        <figure class='media-news'>
+          <a href="img/staticks/fullsize/img_1.jpg" class="group2 bwWrapper">
+            <img src="img/staticks/pop1.jpg" alt="alt..." >
+            <i class="zoom-icoBw"></i>
+          </a>
+        </figure>
+      </div>
+
+      <div class="col-md-4 col-sm-6 animIt14">
+        <figure class='media-news'>
+          <a href="img/staticks/fullsize/img_1.jpg" class="group2 bwWrapper">
+            <img src="img/staticks/pop1.jpg" alt="alt..." >
+            <i class="zoom-icoBw"></i>
+          </a>
+        </figure>
+      </div>
+
+      <div class="col-md-4 col-sm-6 animIt15">
+        <figure class='media-news'>
+          <a href="img/staticks/fullsize/img_1.jpg" class="group2 bwWrapper">
+            <img src="img/staticks/pop1.jpg" alt="alt..." >
+            <i class="zoom-icoBw"></i>
+          </a>
+        </figure>
+      </div>
+
+      <div class="col-md-4 col-sm-6 animIt15">
+        <figure class='media-news'>
+          <a href="img/staticks/fullsize/img_1.jpg" class="group2 bwWrapper">
+            <img src="img/staticks/pop1.jpg" alt="alt..." >
+            <i class="zoom-icoBw"></i>
+          </a>
+        </figure>
+      </div>
+
+      <div class="col-md-4 col-sm-6 animIt15">
+        <figure class='media-news'>
+          <a href="img/staticks/fullsize/img_1.jpg" class="group2 bwWrapper">
+            <img src="img/staticks/pop1.jpg" alt="alt..." >
+            <i class="zoom-icoBw"></i>
+          </a>
+        </figure>
+      </div>
+    </div>
+    <div class="spacer5"></div>
+    <div class="text-center">
+      <a href="#" class='more pull-none blue-text'>
+        <div class="inside">
+          <div class="backside"> View More Photo </div>
+          <div class="frontside"> View More Photo </div>
+        </div>
+      </a>
+    </div>
+    <div class="spacer5"></div>
+  </section>
 </div>
 
+<!--===========================-->
+<!--=========Footer============-->
+<footer class='main-wrapper footer'>
+  <div class="partners" id='partners'>
+    <div class="container make-row">
+      <div class="row">
+        <h4 class='division-h col-md-2 dark-text'>Our Partners</h4>
+        <div id='animIt16' class='col-md-2'>
+          <a href="#"><img src="img/staticks/sponsor1.png" alt="alt..."></a>
+        </div>
+        <div id='animIt17' class='col-md-2'>
+          <a href="#"><img src="img/staticks/sponsor1.png" alt="alt..."></a>
+        </div>
+        <div id='animIt18' class='col-md-2'>
+          <a href="#"><img src="img/staticks/sponsor1.png" alt="alt..."></a>
+        </div>
+        <div id='animIt19' class='col-md-2'>
+          <a href="#"><img src="img/staticks/sponsor1.png" alt="alt..."></a>
+        </div>
+        <div id='animIt20' class='col-md-2'>
+          <a href="#"><img src="img/staticks/sponsor1.png" alt="alt..."></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <a href="#" data-scroll="form_slider" class='btn submit a-trig reg-footer'>Register Now</a>
+  </div>
+  <div class="container bottom">
+
+    <ul class='social-transform footer-soc list-unstyled'>
+      <li>
+        <a href='#' target='blank' class='front'><div class="fa fa-facebook"></div></a>
+      </li>
+      <li>
+        <a href='#' target='blank' class='front'><i class="fa fa-twitter"></i></a>
+      </li>
+<!--      <li>
+        <a href='#' target='blank' class='front'><i class="fa fa-google-plus"></i></a>
+      </li>
+      <li>
+        <a href='#' target='blank' class='front'><i class='fa fa-vimeo-square'></i></a>
+      </li> -->
+    </ul>
+    <div class="clearifx"></div>
+    <span class="copyright">
+      &#169; 2014 Bitspark Limited
+    </span>
+    <div class="container-fluid responsive-switcher hidden-md hidden-lg">
+      <i class="fa fa-mobile"></i>
+      Mobile version: Enabled
+    </div>
+  </div>
+</footer>
+
+<!-- Top -->
+<div id="back-top-wrapper" class="visible-lg">
+  <p id="back-top" class='bounceOut'>
+    <a href="#top">
+      <span></span>
+    </a>
+  </p>
 </div>
-<!--right sidebar end-->
-</section>
-<!-- Placed js at the end of the document so the pages load faster -->
-<!--Core js-->
-<script src="js/jquery.js"></script>
-<script src="js/jquery-ui/jquery-ui-1.10.1.custom.min.js"></script>
-<script src="bs3/js/bootstrap.min.js"></script>
-<script src="js/jquery.dcjqaccordion.2.7.js"></script>
-<script src="js/jquery.scrollTo.min.js"></script>
-<script src="js/jQuery-slimScroll-1.3.0/jquery.slimscroll.js"></script>
-<script src="js/jquery.nicescroll.js"></script>
-<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
-<script src="js/skycons/skycons.js"></script>
-<script src="js/jquery.scrollTo/jquery.scrollTo.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script src="js/calendar/clndr.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
-<script src="js/calendar/moment-2.2.1.js"></script>
-<script src="js/evnt.calendar.init.js"></script>
-<script src="js/jvector-map/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="js/jvector-map/jquery-jvectormap-us-lcc-en.js"></script>
-<script src="js/gauge/gauge.js"></script>
-<!--clock init-->
-<script src="js/css3clock/js/css3clock.js"></script>
-<!--Easy Pie Chart-->
-<script src="js/easypiechart/jquery.easypiechart.js"></script>
-<!--Sparkline Chart-->
-<script src="js/sparkline/jquery.sparkline.js"></script>
-<!--Morris Chart-->
-<script src="js/morris-chart/morris.js"></script>
-<script src="js/morris-chart/raphael-min.js"></script>
-<!--jQuery Flot Chart-->
-<script src="js/flot-chart/jquery.flot.js"></script>
-<script src="js/flot-chart/jquery.flot.tooltip.min.js"></script>
-<script src="js/flot-chart/jquery.flot.resize.js"></script>
-<script src="js/flot-chart/jquery.flot.pie.resize.js"></script>
-<script src="js/flot-chart/jquery.flot.animator.min.js"></script>
-<script src="js/flot-chart/jquery.flot.growraf.js"></script>
-<script src="js/dashboard.js"></script>
-<script src="js/jquery.customSelect.min.js" ></script>
-<!--common script init for all pages-->
-<script src="js/scripts.js"></script>
-<!--script for this page-->
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" tabindex="-1" aria-hidden="true">
+  <div class="modal-wr">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+
+    <form id='contact' action="request-form.php" method="post" accept-charset="utf-8" role="form">
+      <input type="hidden" name='resultCaptcha' value=''>
+      <div class='control-group'>
+        <input type="text" name='name' value='' placeholder='Enter your name' data-required>
+      </div>
+      <div class='control-group'>
+        <input type="text" name='email' value='' placeholder='Enter your mail' data-required class='insert-attr'>
+      </div>
+      <div class='control-group'>
+        <textarea name='message' cols="30" rows="10" maxlength="300" placeholder='Enter your message ...' data-required></textarea>
+      </div>
+      <div class='control-group captcha'>
+        <div class="picture-code">
+          What is <span id="numb1">4</span> + <span id="numb2">1</span> (Anti-spam)
+        </div>
+        <input type="text" placeholder='Type here ...' name='check' id='chek' data-required data-pattern="5">
+      </div>
+      <button type="submit" value="Submit" class='btn submit' name="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="myModalform" class="modal fade" tabindex="-2" role="dialog" aria-hidden="true">
+  <div class="modal-wr more-size">
+    <h2 class='medium-h text-center'>Take part in the training</h2>
+    <h3 class='xsmall-h text-center'>Nulla ornare tortor quis rhoncus vulputate. </h3>
+    <form class='reg-now-visible' id='formIndex' action="contact-form.php" method="post" accept-charset="utf-8" role="form">
+      <div class='control-group'>
+        <input type="text" name="name" value="" placeholder='Enter your name' data-required>
+      </div>
+      <div class='control-group'>
+        <input type="text" name="email" value="" placeholder='Enter your mail' data-required class='insert-attr'>
+      </div>
+      <div class='control-group'>
+        <input type="text" name="phone" value="" placeholder='Enter your telephone' data-required data-pattern="^[0-9]+$">
+      </div>
+
+      <div class="relative">
+        <select name="caoch" class="styled">
+          <option value="Select Your Caoch">Select Your Caoch</option>
+          <option value="Caoch 1" >Caoch 1</option>
+          <option value="Caoch 2" >Caoch 2</option>
+          <option value="Caoch 3" >Caoch 3</option>
+        </select>
+      </div>
+
+      <div class="relative">
+        <select name="file" class="styled">
+          <option value="Select File">Select File</option>
+          <option value="File 1">File 1</option>
+          <option value="File 2">File 2</option>
+          <option value="File 3">File 3</option>
+        </select>
+      </div>
+
+       <button type="submit" value="Register Now" class='btn submit' name="submit">Register Now</button>
+    </form>
+  </div>
+</div>
+
+
+</div>
+  <div class="mask"></div>
+  <script src="js/libs/jquery-1.10.1.min.js"></script>
+  <script src="js/libs/bootstrap.min.js"></script>
+  <script src="js/cross/modernizr.js"></script>
+  <script src="js/jquery.bxslider.min.js"></script>
+  <script src="js/jquery.customSelect.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.colorbox-min.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.parallax-1.1.3.js"></script>
+  <script src="js/custom.js"></script>
+  <!-- file loader -->
+  <script src="js/loader.js"></script>
+
 </body>
 </html>
