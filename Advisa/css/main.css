@@ -2574,8 +2574,11 @@ section.video-bxslider:hover:after {
 	outline: none;
 }
 
+.bitlogo{
+	width: 280px;
+	height: 60px;
 
-
+}
 
 
 /*xSlider*/
