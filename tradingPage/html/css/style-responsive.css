@@ -1,4 +1,4 @@
-@media (min-width: 768px) and (max-width: 980px) {
+@media (min-width: 1001px) and (max-width: 1600px) {
     /*-*/
     .prd-row .action {
         right: 25px;
@@ -25,7 +25,7 @@
     }
 }
 
-@media (min-width: 480px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 1000px) {
   .header{
     position: relative! important;
     margin-top: 80px ! important;
