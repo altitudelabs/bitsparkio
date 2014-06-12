@@ -3,8 +3,11 @@
 	#form_slider .bx-wrapper .bx-controls-direction a {
 		display: none;
 	}
+
+	/*Removed slider dot*/
+
 	.big-slider #form_slider .bx-pager {
-		display: block;
+		display: none;
 	}
 
 

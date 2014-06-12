@@ -2511,14 +2511,14 @@ section.video-bxslider:hover:after {
 	background: rgba(45, 62, 80, 0.1);
 }
 .glam-btn {
-	background: rgba(0, 0, 0, 0.1);
-	border: 1px solid #C8CCCF;
-	color: #fff;
+	background: #FFFFFF;
+	border: 1px solid #FFFFFF;
+	color: #2d3e50;
 }
 .glam-btn:hover {
-	background: #fff;
-	border-color: #fff;
-	color: #000;
+	background: #E0EBEB;
+	border-color: #E0EBEB;
+	color: #2d3e50;
 }
 .toggle-slide-left {
 	border: none;
