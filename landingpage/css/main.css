@@ -391,6 +391,7 @@ img {
 	text-shadow: 4px rgba(252, 206, 226, 0.7);
 }
 .inside {
+	font-weight: bold;
 	position: relative;
 	top: -22px;
 	transition: top 0.2s ease-out 0s;
