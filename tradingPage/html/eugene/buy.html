@@ -1,5 +1,5 @@
 <div class="row">
-        <h3></h3>
+  <h3></h3>
         <!-- <div class="col-md-2">
           <div>
             <div class="panel panel-default">
@@ -17,118 +17,118 @@
           </div>
         </div>
  -->
-        <div class="col-md-12">
-          <div class="row">
-            <div class="col-md-12" style="text-align:center;">
-              <div class="panel panel-default">
-                <div class="panel-heading">Trade</div>
-                <div class="panel-body">
-                  <form class="form-inline" role="form" style="padding-bottom:10px;">
-                    <div class="buysellButton" style="padding-left:15px; padding-bottom:27px">
-                      <input id="tradeType" type="checkbox"  checked />
-                    </div>
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-12" style="text-align:center;">
+        <div class="panel panel-default">
+          <div class="panel-heading">Trade</div>
+          <div class="panel-body">
+            <form class="form-inline" role="form" style="padding-bottom:10px;">
+              <div class="buysellButton" style="padding-left:15px; padding-bottom:27px">
+                <input id="tradeType" type="checkbox"  checked />
+              </div>
 
-                    <div class="form-group col-md-3">
-                      <div class="input-group">
-                        <input type="text" class="form-control" id="numberBTC" placeholder="Amount">
-                        <span name="cryptolabel" class="input-group-addon">BTC</span>
-                      </div>
-                      <span class="pull-left form-control form-control-2">
-                        <small id="amountCryptoLabel">Amount of <span name="cryptolabel">BTC</span> to buy.</small>
-                      </span>
-                    </div>
+              <div class="form-group col-md-3">
+                <div class="input-group">
+                  <input type="text" class="form-control" id="numberBTC" placeholder="Amount">
+                  <span name="cryptolabel" class="input-group-addon">BTC</span>
+                </div>
+                <span class="pull-left form-control form-control-2">
+                  <small id="amountCryptoLabel">Amount of <span name="cryptolabel">BTC</span> to buy.</small>
+                </span>
+              </div>
 
-                    <div class="form-group col-md-3">
-                      <div class="input-group">
-                        <input type="text" class="form-control" id="pricePerBTC" value="500" placeholder="Price">
-                        <span class="input-group-addon">USD</span>
-                      </div>
-                      <span class="pull-left form-control form-control-2">
-                        <small id="fixedPriceLabel">Buy at a fixed price per <span name="cryptolabel">BTC</span>.</small>
-                      </span>
-                    </div>
+              <div class="form-group col-md-3">
+                <div class="input-group">
+                  <input type="text" class="form-control" id="pricePerBTC" value="500" placeholder="Price">
+                  <span class="input-group-addon">USD</span>
+                </div>
+                <span class="pull-left form-control form-control-2">
+                  <small id="fixedPriceLabel">Buy at a fixed price per <span name="cryptolabel">BTC</span>.</small>
+                </span>
+              </div>
 
-                    <div class="form-group col-md-2" style="padding-left:20px; margin-top:-1px">
-                      <input id="orderType" type="checkbox" checked />
-                    </div>
+              <div class="form-group col-md-2" style="padding-left:20px; margin-top:-1px">
+                <input id="orderType" type="checkbox" checked />
+              </div>
                   
-                    <div class="form-group col-md-4">
-                      <div class="input-group">
-                        <input type="text" class="form-control" id="totalFiat" placeholder="Total">
-                        <span name="fiatlabel" class="input-group-addon">USD</span>
-                      </div>
-                      <span class="form-control form-control-2">
-                        <small id="fiatLabel">Estimated amount of <span name="fiatlabel">USD</span> to spend.</small>
-                      </span>
-                    </div>
+              <div class="form-group col-md-4">
+                <div class="input-group">
+                  <input type="text" class="form-control" id="totalFiat" placeholder="Total">
+                  <span name="fiatlabel" class="input-group-addon">USD</span>
+                </div>
+                <span class="form-control form-control-2">
+                  <small id="fiatLabel">Estimated amount of <span name="fiatlabel">USD</span> to spend.</small>
+                </span>
+              </div>
 
-                    <button id="buySellBt" type="submit" style="width:30%; margin:20px" class="btn btn-success">Buy</button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row" style="text-align:center">
-            <div class="col-md-6">
-              <div class="panel panel-success">
-                <div class="panel-heading">Bids</div>
-                <div class="panel-body"> 
-                  <table id="bidsTable" class="table table-striped table-bordered table-hover">
-                    <thead>
-                      <tr>
-                        <th style="text-align:center">Price</th>
-                        <th style="text-align:center">Amount</th>
-                        <th style="text-align:center">Value</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr><td>489</td><td>0</td><td>0</td></tr>
-                      <tr><td>488</td><td>0</td><td>0</td></tr>
-                      <tr><td>487</td><td>0</td><td>0</td></tr>
-                      <tr><td>486</td><td>0</td><td>0</td></tr>
-                      <tr><td>485</td><td>0</td><td>0</td></tr>
-                      <tr><td>484</td><td>15</td><td>7,260</td></tr>
-                      <tr><td>483</td><td>20</td><td>9,660</td></tr>
-                      <tr><td>482</td><td>30</td><td>14,460</td></tr>
-                      <tr><td>481</td><td>40</td><td>19,240</td></tr>
-                      <tr><td>480</td><td>30</td><td>14,400</td></tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <div class="panel panel-danger">
-                <div class="panel-heading">Asks</div>
-                <div class="panel-body">
-                  <table id="asksTable" class="table table-striped table-bordered table-hover">
-                    <thead>
-                      <tr>
-                        <th style="text-align:center">Price</th>
-                        <th style="text-align:center">Amount</th>
-                        <th style="text-align:center">Value</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr><td>489</td><td>18</td><td>8,802</td></tr>
-                      <tr><td>488</td><td>25</td><td>12,200</td></tr>
-                      <tr><td>487</td><td>10</td><td>4,870</td></tr>
-                      <tr><td>486</td><td>0</td><td>0</td></tr>
-                      <tr><td>485</td><td>0</td><td>0</td></tr>
-                      <tr><td>484</td><td>0</td><td>0</td></tr>
-                      <tr><td>483</td><td>0</td><td>0</td></tr>
-                      <tr><td>482</td><td>0</td><td>0</td></tr>
-                      <tr><td>481</td><td>0</td><td>0</td></tr>
-                      <tr><td>480</td><td>0</td><td>0</td></tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
+              <button id="buySellBt" type="submit" style="width:30%; margin:20px" class="btn btn-success">Buy</button>
+            </form>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="row" style="text-align:center">
+      <div class="col-md-6">
+        <div class="panel panel-success">
+          <div class="panel-heading">Bids</div>
+          <div class="panel-body"> 
+            <table id="bidsTable" class="table table-striped table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th style="text-align:center">Price</th>
+                  <th style="text-align:center">Amount</th>
+                  <th style="text-align:center">Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>489</td><td>0</td><td>0</td></tr>
+                <tr><td>488</td><td>0</td><td>0</td></tr>
+                <tr><td>487</td><td>0</td><td>0</td></tr>
+                <tr><td>486</td><td>0</td><td>0</td></tr>
+                <tr><td>485</td><td>0</td><td>0</td></tr>
+                <tr><td>484</td><td>15</td><td>7,260</td></tr>
+                <tr><td>483</td><td>20</td><td>9,660</td></tr>
+                <tr><td>482</td><td>30</td><td>14,460</td></tr>
+                <tr><td>481</td><td>40</td><td>19,240</td></tr>
+                <tr><td>480</td><td>30</td><td>14,400</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="panel panel-danger">
+          <div class="panel-heading">Asks</div>
+          <div class="panel-body">
+            <table id="asksTable" class="table table-striped table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th style="text-align:center">Price</th>
+                  <th style="text-align:center">Amount</th>
+                  <th style="text-align:center">Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>489</td><td>18</td><td>8,802</td></tr>
+                <tr><td>488</td><td>25</td><td>12,200</td></tr>
+                <tr><td>487</td><td>10</td><td>4,870</td></tr>
+                <tr><td>486</td><td>0</td><td>0</td></tr>
+                <tr><td>485</td><td>0</td><td>0</td></tr>
+                <tr><td>484</td><td>0</td><td>0</td></tr>
+                <tr><td>483</td><td>0</td><td>0</td></tr>
+                <tr><td>482</td><td>0</td><td>0</td></tr>
+                <tr><td>481</td><td>0</td><td>0</td></tr>
+                <tr><td>480</td><td>0</td><td>0</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="row">
     <div class="col-sm-12">
         <section class="panel">
@@ -146,3 +146,6 @@
         </section>
     </div>
 </div>
+
+
+

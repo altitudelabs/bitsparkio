@@ -109,7 +109,7 @@ $(function() {
     return result;
     }
     var updateInterval = 100;
-    var plot = $.plot($("#reatltime-chart #reatltime-chartContainer"), [
+    var plot = $.plot($("#realtime-chart #realtime-chartContainer"), [
             GetData()], {
             series: {
                 lines: {
