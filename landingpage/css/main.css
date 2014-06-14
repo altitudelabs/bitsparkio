@@ -982,6 +982,7 @@ form .success input, form .success textarea {
 .btn:hover {
 	background: #DB2027;
 }
+
 .icon-success {
 	background: url("../img/sprite/icons.png") no-repeat scroll -69px -368px rgba(0, 0, 0, 0);
 	display: inline-block;
@@ -1006,7 +1007,9 @@ form .success input, form .success textarea {
 	text-transform: uppercase;
 }
 .submit:hover {
-	background: #FF7277;
+	background: #E0EBEB;
+	border-color: #E0EBEB;
+	color: #2d3e50;
 }
 .submit i {
 	margin-right: 10px;
@@ -1882,6 +1885,9 @@ span.customSelect {
 	padding: 33px;
 }
 .reg-footer {
+	background: #FFFFFF;
+	border: 1px solid #FFFFFF;
+	color: #2d3e50;
 	margin-bottom: 0;
 }
 .last-elem .nav-menu {
@@ -1954,7 +1960,6 @@ span.customSelect {
 .footer-soc .back {
 	color: #FF6065;
 }
-
 
 /*=================>-End--Footer-<================*/
 /*====================>-Other-<===================*/
@@ -2581,8 +2586,8 @@ section.video-bxslider:hover:after {
 }
 
 .bitlogo{
-	width: 280px;
-	height: 60px;
+	width: 235px;
+	height: 50px;
 
 }
 
@@ -2613,6 +2618,9 @@ section.video-bxslider:hover:after {
 }
 
 
-
+/*CSS Animations*/
+#object{
+ visibility: hidden;
+}
 
 
