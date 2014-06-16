@@ -7,36 +7,69 @@
         $(document).ready(function(){
              /*== NAVIGATION ==*/
 
+             //graph preview
+
+             $("#graph-preview").click(function(){
+                var next;
+                console.log($(".header").css('top'));
+                if( $(".header").css("top") !== '0px'){
+                    var script = document.createElement('script');
+                    script.src = "eugene/chartData/real_time_chart.init.js";
+                    script.className = "chartsrc";
+                    document.body.appendChild(script);
+                    next = "0px";
+                } else {
+                    $( ".chartsrc" ).remove();
+                    next = "-400px"; 
+                }
+
+                $(".header").animate({
+                    top: next
+                }, 200, function(){
+
+                });
+             });
+
+
+// $( "#clickme" ).click(function() {
+//   $( "#book" ).animate({
+//     opacity: 0.25,
+//     left: "+=50",
+//     height: "toggle"
+//   }, 5000, function() {
+//     // Animation complete.
+//   });
+// });
              //Account
              $("#navigation-accounts").click(function(){
                 console.log('loading not-ready');
-                 $(".wrapper").load("./eugene/not-ready.html");
+                 $(".wrapper").load("./eugene/accounts.html", function(){
+                    console.log('initing editalbeTable.js', EditableTable);
+                    EditableTable.init();
+                 });
              });
 
              //Trade
              $("#trade-buy").click(function(e){
                 $(".wrapper").load("./eugene/buy.html", function(){
                     $( ".chartsrc" ).remove();
-                    // setTimeout(function(){
-                        console.log('loading data!');
-                        var script1 = document.createElement('script');                    
-                        script1.src = "js/morris-chart/raphael-min.js";
-                        script1.className = "chartsrc";
+                        // var script1 = document.createElement('script');                    
+                        // script1.src = "js/morris-chart/raphael-min.js";
+                        // script1.className = "chartsrc";
                 
-                        var script2 = document.createElement('script');
-                        script2.src = "js/morris-chart/morris.js";
-                        script2.className = "chartsrc";
+                        // var script2 = document.createElement('script');
+                        // script2.src = "js/morris-chart/morris.js";
+                        // script2.className = "chartsrc";
                         
-                        var script3 = document.createElement('script');
-                        script3.src = "eugene/chartData/buy.js";
-                        script3.className = "chartsrc";
+                        var script = document.createElement('script');
+                        script.src = "eugene/chartData/buy.js";
+                        script.className = "chartsrc";
 
-                        document.body.appendChild(script1);
-                        document.body.appendChild(script2);
-                        setTimeout(function(){
-                            document.body.appendChild(script3);
-                        }, 250);
-                    // }, 500);
+                        // document.body.appendChild(script1);
+                        // document.body.appendChild(script2);
+                        // setTimeout(function(){
+                        document.body.appendChild(script);
+                        // }, 250);
                 });
 
                 // if (!$('#container').hasClass('open-right-panel')) {
@@ -51,9 +84,9 @@
                 //     $('.header').removeClass('merge-header');
                 // }
 
-                $('#container').toggleClass('open-right-panel');
-                $('.right-sidebar').toggleClass('open-right-bar');
-                $('.header').toggleClass('merge-header');
+                // $('#container').toggleClass('open-right-panel');
+                // $('.right-sidebar').toggleClass('open-right-bar');
+                // $('.header').toggleClass('merge-header');
 
                 e.stopPropagation(); 
              });
@@ -65,23 +98,21 @@
                     
                     $( ".chartsrc" ).remove();
 
-                    var script1 = document.createElement('script');
-                    script1.src = "js/morris-chart/morris.js";
-                    script1.className = "chartsrc";
+                    // var script1 = document.createElement('script');
+                    // script1.src = "js/morris-chart/morris.js";
+                    // script1.className = "chartsrc";
                     
-                    var script2 = document.createElement('script');                    
-                    script2.src = "js/morris-chart/raphael-min.js";
-                    script2.className = "chartsrc";
+                    // var script2 = document.createElement('script');                    
+                    // script2.src = "js/morris-chart/raphael-min.js";
+                    // script2.className = "chartsrc";
                     
-                    var script3 = document.createElement('script');
-                    script3.src = "js/morris.init.js";
-                    script3.className = "chartsrc";
+                    var script = document.createElement('script');
+                    script.src = "js/morris.init.js";
+                    script.className = "chartsrc";
 
-                    document.body.appendChild(script1);
-                    document.body.appendChild(script2);
-                    setTimeout(function(){
-                        document.body.appendChild(script3);
-                    }, 250);
+                    // setTimeout(function(){
+                    document.body.appendChild(script);
+                    // }, 250);
                  });
              });
 
@@ -90,18 +121,18 @@
 
                     $( ".chartsrc" ).remove();
 
-                    var script1 = document.createElement('script');
-                    script1.src = "js/chart-js/Chart.js";
-                    script1.className = "chartsrc";
+                    // var script1 = document.createElement('script');
+                    // script1.src = "js/chart-js/Chart.js";
+                    // script1.className = "chartsrc";
 
-                    var script2 = document.createElement('script');
-                    script2.src = "js/chartjs.init.js";
-                    script2.className = "chartsrc";
+                    var script = document.createElement('script');
+                    script.src = "js/chartjs.init.js";
+                    script.className = "chartsrc";
 
-                    document.body.appendChild(script1);
-                    setTimeout(function(){
-                        document.body.appendChild(script2);
-                    }, 250);
+                    // document.body.appendChild(script1);
+                    // setTimeout(function(){
+                    document.body.appendChild(script);
+                    // }, 250);
                  });
             });
 
@@ -110,48 +141,48 @@
                     
                     $( ".chartsrc" ).remove();
 
-                    var script1 = document.createElement('script');
-                    script1.src = "js/flot-chart/jquery.flot.js";
-                    script1.className = "chartsrc";
+                    // var script1 = document.createElement('script');
+                    // script1.src = "js/flot-chart/jquery.flot.js";
+                    // script1.className = "chartsrc";
 
-                    var script2 = document.createElement('script');
-                    script2.src = "js/flot-chart/jquery.flot.tooltip.min.js";
-                    script2.className = "chartsrc";
+                    // var script2 = document.createElement('script');
+                    // script2.src = "js/flot-chart/jquery.flot.tooltip.min.js";
+                    // script2.className = "chartsrc";
                     
-                    var script3 = document.createElement('script');
-                    script3.src = "js/flot-chart/jquery.flot.resize.js";
-                    script3.className = "chartsrc";
+                    // var script3 = document.createElement('script');
+                    // script3.src = "js/flot-chart/jquery.flot.resize.js";
+                    // script3.className = "chartsrc";
                     
-                    var script4 = document.createElement('script');
-                    script4.src = "js/flot-chart/jquery.flot.pie.resize.js";
-                    script4.className = "chartsrc";
+                    // var script4 = document.createElement('script');
+                    // script4.src = "js/flot-chart/jquery.flot.pie.resize.js";
+                    // script4.className = "chartsrc";
                     
-                    var script5 = document.createElement('script');
-                    script5.src = "js/flot-chart/jquery.flot.selection.js";
-                    script5.className = "chartsrc";
+                    // var script5 = document.createElement('script');
+                    // script5.src = "js/flot-chart/jquery.flot.selection.js";
+                    // script5.className = "chartsrc";
                     
-                    var script6 = document.createElement('script');
-                    script6.src = "js/flot-chart/jquery.flot.stack.js";
-                    script6.className = "chartsrc";
+                    // var script6 = document.createElement('script');
+                    // script6.src = "js/flot-chart/jquery.flot.stack.js";
+                    // script6.className = "chartsrc";
                     
-                    var script7 = document.createElement('script');
-                    script7.src = "js/flot-chart/jquery.flot.time.js";
-                    script7.className = "chartsrc";
+                    // var script7 = document.createElement('script');
+                    // script7.src = "js/flot-chart/jquery.flot.time.js";
+                    // script7.className = "chartsrc";
                     
-                    var script8 = document.createElement('script');
-                    script8.src = "js/flot.chart.init.js";
-                    script8.className = "chartsrc";
+                    var script = document.createElement('script');
+                    script.src = "js/flot.chart.init.js";
+                    script.className = "chartsrc";
 
-                    document.body.appendChild(script1);
-                    document.body.appendChild(script2);
-                    document.body.appendChild(script3);
-                    document.body.appendChild(script4);
-                    document.body.appendChild(script5);
-                    document.body.appendChild(script6);
-                    document.body.appendChild(script7);
-                    setTimeout(function(){
-                        document.body.appendChild(script8);
-                    }, 250);
+                    // document.body.appendChild(script1);
+                    // document.body.appendChild(script2);
+                    // document.body.appendChild(script3);
+                    // document.body.appendChild(script4);
+                    // document.body.appendChild(script5);
+                    // document.body.appendChild(script6);
+                    // document.body.appendChild(script7);
+                    // setTimeout(function(){
+                    document.body.appendChild(script);
+                    // }, 250);
                  });
             });
 
@@ -250,8 +281,6 @@
                 sliceColors: ['#e1e1e1', '#8175c9']
             });
 
-
-
             var sparkLine = function () {
                 $(".sparkline").each(function () {
                     var $data = $(this).data();
@@ -285,11 +314,7 @@
             });
             sparkLine(false);
 
-
-
         }
-
-
 
         if ($.fn.plot) {
             var datatPie = [30, 50];
@@ -309,10 +334,6 @@
 
                         }
                     }
-
-
-
-
                 },
 
                 legend: {
@@ -326,8 +347,6 @@
                 colors: ["#ff6d60", "#cbcdd9"]
             });
         }
-
-
 
         /*==Collapsible==*/
         $('.widget-head').click(function (e) {
@@ -346,9 +365,6 @@
             e.preventDefault();
         });
 
-
-
-
         /*==Sidebar Toggle==*/
 
         $(".leftside-navigation .sub-menu > a").click(function () {
@@ -361,9 +377,7 @@
         });
 
 
-
         $('.sidebar-toggle-box .fa-bars').click(function (e) {
-            console.log('sidebar toggle box clicked')
             $(".leftside-navigation").niceScroll({
                 cursorcolor: "#1FB5AD",
                 cursorborder: "0px solid #fff",
@@ -418,7 +432,6 @@
 
         // });
 
-
         $('.panel .tools .fa').click(function () {
             var el = $(this).parents(".panel").children(".panel-body");
             if ($(this).hasClass("fa-chevron-down")) {
@@ -428,7 +441,6 @@
                 $(this).removeClass("fa-chevron-up").addClass("fa-chevron-down");
                 el.slideDown(200); }
         });
-
 
 
         $('.panel .tools .fa-times').click(function () {

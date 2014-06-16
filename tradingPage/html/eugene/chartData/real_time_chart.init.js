@@ -28,68 +28,68 @@ var data7_2 = [
     [1354596000000, 788],
     [1354597000000, 836]
 ];
-$(function() {
-    $.plot($("#visitors-chart #visitors-container"), [{
-        data: data7_1,
-        label: "Page View",
-        lines: {
-            fill: true
-        }
-    }, {
-        data: data7_2,
-        label: "Online User",
+// $(function() {
+//     $.plot($("#visitors-chart #visitors-container"), [{
+//         data: data7_1,
+//         label: "Page View",
+//         lines: {
+//             fill: true
+//         }
+//     }, {
+//         data: data7_2,
+//         label: "Online User",
 
-        points: {
-            show: true
-        },
-        lines: {
-            show: true
-        },
-        yaxis: 2
-    }
-    ],
-        {
-            series: {
-                lines: {
-                    show: true,
-                    fill: false
-                },
-                points: {
-                    show: true,
-                    lineWidth: 2,
-                    fill: true,
-                    fillColor: "#ffffff",
-                    symbol: "circle",
-                    radius: 5
-                },
-                shadowSize: 0
-            },
-            grid: {
-                hoverable: true,
-                clickable: true,
-                tickColor: "#f9f9f9",
-                borderWidth: 1,
-                borderColor: "#eeeeee"
-            },
-            colors: ["#79D1CF", "#E67A77"],
-            tooltip: true,
-            tooltipOpts: {
-                defaultTheme: false
-            },
-            xaxis: {
-                mode: "time"
+//         points: {
+//             show: true
+//         },
+//         lines: {
+//             show: true
+//         },
+//         yaxis: 2
+//     }
+//     ],
+//         {
+//             series: {
+//                 lines: {
+//                     show: true,
+//                     fill: false
+//                 },
+//                 points: {
+//                     show: true,
+//                     lineWidth: 2,
+//                     fill: true,
+//                     fillColor: "#ffffff",
+//                     symbol: "circle",
+//                     radius: 5
+//                 },
+//                 shadowSize: 0
+//             },
+//             grid: {
+//                 hoverable: true,
+//                 clickable: true,
+//                 tickColor: "#f9f9f9",
+//                 borderWidth: 1,
+//                 borderColor: "#eeeeee"
+//             },
+//             colors: ["#79D1CF", "#E67A77"],
+//             tooltip: true,
+//             tooltipOpts: {
+//                 defaultTheme: false
+//             },
+//             xaxis: {
+//                 mode: "time"
 
 
-            },
-            yaxes: [{
-                /* First y axis */
-            }, {
-                /* Second y axis */
-                position: "right" /* left or right */
-            }]
-        }
-    );
-});
+//             },
+//             yaxes: [{
+//                 /* First y axis */
+//             }, {
+//                 /* Second y axis */
+//                 position: "right" /* left or right */
+//             }]
+//         }
+//     );
+// });
 
     $(function() {
         var data1 = [];
@@ -147,76 +147,76 @@ $(function() {
         update();
     });
 
-    $(function() {
-        var data = [{
-            label: "Paid Signup",
-            data: 60
-        }, {
-            label: "Free Signup",
-            data: 30
-        }, {
-            label: "Guest Signup",
-            data: 10
-        }];
-        var options = {
-            series: {
-                pie: {
-                    show: true
-                }
-            },
-            legend: {
-                show: true
-            },
-            grid: {
-                hoverable: true,
-                clickable: true
-            },
-            colors: ["#79D1CF", "#D9DD81", "#E67A77"],
-            tooltip: true,
-            tooltipOpts: {
-                defaultTheme: false
-            }
-        };
-        $.plot($("#pie-chart #pie-chartContainer"), data, options);
-    });
+    // $(function() {
+    //     var data = [{
+    //         label: "Paid Signup",
+    //         data: 60
+    //     }, {
+    //         label: "Free Signup",
+    //         data: 30
+    //     }, {
+    //         label: "Guest Signup",
+    //         data: 10
+    //     }];
+    //     var options = {
+    //         series: {
+    //             pie: {
+    //                 show: true
+    //             }
+    //         },
+    //         legend: {
+    //             show: true
+    //         },
+    //         grid: {
+    //             hoverable: true,
+    //             clickable: true
+    //         },
+    //         colors: ["#79D1CF", "#D9DD81", "#E67A77"],
+    //         tooltip: true,
+    //         tooltipOpts: {
+    //             defaultTheme: false
+    //         }
+    //     };
+    //     $.plot($("#pie-chart #pie-chartContainer"), data, options);
+    // });
 
-    $(function() {
-        var data = [{
-            label: "Premium Member",
-            data: 40
-        }, {
-            label: "Gold Member",
-            data: 20
-        }, {
-            label: "Platinum Member",
-            data: 10
-        }, {
-            label: "Silver Member",
-            data: 30
-        }];
-        var options = {
-            series: {
-                pie: {
-                    show: true,
-                    innerRadius: 0.5,
-                    show: true
-                }
-            },
-            legend: {
-                show: true
-            },
-            grid: {
-                hoverable: true,
-                clickable: true
-            },
-            colors: ["#79D1CF", "#D9DD81", "#E67A77","#9972B5"],
-            tooltip: true,
-            tooltipOpts: {
-                defaultTheme: false
-            }
-        };
-        $.plot($("#pie-chart-donut #pie-donutContainer"), data, options);
-    });
+    // $(function() {
+    //     var data = [{
+    //         label: "Premium Member",
+    //         data: 40
+    //     }, {
+    //         label: "Gold Member",
+    //         data: 20
+    //     }, {
+    //         label: "Platinum Member",
+    //         data: 10
+    //     }, {
+    //         label: "Silver Member",
+    //         data: 30
+    //     }];
+    //     var options = {
+    //         series: {
+    //             pie: {
+    //                 show: true,
+    //                 innerRadius: 0.5,
+    //                 show: true
+    //             }
+    //         },
+    //         legend: {
+    //             show: true
+    //         },
+    //         grid: {
+    //             hoverable: true,
+    //             clickable: true
+    //         },
+    //         colors: ["#79D1CF", "#D9DD81", "#E67A77","#9972B5"],
+    //         tooltip: true,
+    //         tooltipOpts: {
+    //             defaultTheme: false
+    //         }
+    //     };
+    //     $.plot($("#pie-chart-donut #pie-donutContainer"), data, options);
+    // });
 
     $(function() {
         var data24Hours = [
@@ -374,8 +374,8 @@ $(function() {
                 noColumns: 0
             }
         };
-        var plot = $.plot($("#combine-chart #combine-chartContainer"),
-                data, options);
+        // var plot = $.plot($("#combine-chart #combine-chartContainer"),
+        //         data, options);
     });
 
     $(function() {

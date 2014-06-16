@@ -65,7 +65,7 @@ $(".group5").colorbox({
 // *************
 var bxSlider = $('.software_slider .form-bxslider').bxSlider({
 	mode: 'fade',
-	auto: true,
+	// auto: true,
 	pause: 10000,
 	adaptiveHeight: true,
 	pagerCustom: '#dafault_pager',
@@ -89,7 +89,7 @@ var bxSlider = $('.software_slider .form-bxslider').bxSlider({
 
 $('.xSlider').bxSlider({
 	mode: 'fade',
-	auto: true,
+	// auto: true,
 	pause: 10000,
 	adaptiveHeight: true,
 	onSliderLoad: function() {
