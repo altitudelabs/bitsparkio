@@ -733,7 +733,6 @@ Licensed under the MIT license.
 
             // If no x/y axis options were provided, create one of each anyway,
             // since the rest of the code assumes that they exist.
-
             var i, axisOptions, axisCount,
                 fontDefaults = {
                     style: placeholder.css("font-style"),
