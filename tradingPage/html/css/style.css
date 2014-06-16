@@ -764,7 +764,7 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
     position:fixed;
     height:100%;
     z-index:1000;
-    right:-175px;
+    right:-170px;
     top:0;
     -webkit-transition:all .3s ease-in-out;
     -moz-transition:all .3s ease-in-out;

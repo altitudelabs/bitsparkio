@@ -28,7 +28,6 @@
                 }, 200, function(){
 
                 });
-
              });
 
 
@@ -44,7 +43,10 @@
              //Account
              $("#navigation-accounts").click(function(){
                 console.log('loading not-ready');
-                 $(".wrapper").load("./eugene/not-ready.html");
+                 $(".wrapper").load("./eugene/accounts.html", function(){
+                    console.log('initing editalbeTable.js', EditableTable);
+                    EditableTable.init();
+                 });
              });
 
              //Trade
@@ -66,7 +68,7 @@
                         // document.body.appendChild(script1);
                         // document.body.appendChild(script2);
                         // setTimeout(function(){
-                            document.body.appendChild(script);
+                        document.body.appendChild(script);
                         // }, 250);
                 });
 
@@ -109,7 +111,7 @@
                     script.className = "chartsrc";
 
                     // setTimeout(function(){
-                        document.body.appendChild(script);
+                    document.body.appendChild(script);
                     // }, 250);
                  });
              });
@@ -129,7 +131,7 @@
 
                     // document.body.appendChild(script1);
                     // setTimeout(function(){
-                        document.body.appendChild(script);
+                    document.body.appendChild(script);
                     // }, 250);
                  });
             });
@@ -179,7 +181,7 @@
                     // document.body.appendChild(script6);
                     // document.body.appendChild(script7);
                     // setTimeout(function(){
-                        document.body.appendChild(script);
+                    document.body.appendChild(script);
                     // }, 250);
                  });
             });
@@ -279,8 +281,6 @@
                 sliceColors: ['#e1e1e1', '#8175c9']
             });
 
-
-
             var sparkLine = function () {
                 $(".sparkline").each(function () {
                     var $data = $(this).data();
@@ -314,11 +314,7 @@
             });
             sparkLine(false);
 
-
-
         }
-
-
 
         if ($.fn.plot) {
             var datatPie = [30, 50];
@@ -338,10 +334,6 @@
 
                         }
                     }
-
-
-
-
                 },
 
                 legend: {
@@ -355,8 +347,6 @@
                 colors: ["#ff6d60", "#cbcdd9"]
             });
         }
-
-
 
         /*==Collapsible==*/
         $('.widget-head').click(function (e) {
@@ -375,9 +365,6 @@
             e.preventDefault();
         });
 
-
-
-
         /*==Sidebar Toggle==*/
 
         $(".leftside-navigation .sub-menu > a").click(function () {
@@ -388,7 +375,6 @@
             else
                 $(".leftside-navigation").scrollTo("+=" + Math.abs(diff), 500);
         });
-
 
 
         $('.sidebar-toggle-box .fa-bars').click(function (e) {
@@ -446,7 +432,6 @@
 
         // });
 
-
         $('.panel .tools .fa').click(function () {
             var el = $(this).parents(".panel").children(".panel-body");
             if ($(this).hasClass("fa-chevron-down")) {
@@ -456,7 +441,6 @@
                 $(this).removeClass("fa-chevron-up").addClass("fa-chevron-down");
                 el.slideDown(200); }
         });
-
 
 
         $('.panel .tools .fa-times').click(function () {

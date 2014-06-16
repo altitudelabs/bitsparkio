@@ -19,11 +19,9 @@ var EditableTable = function () {
                 var aData = oTable.fnGetData(nRow);
                 var jqTds = $('>td', nRow);
                 jqTds[0].innerHTML = '<input type="text" class="form-control small" value="' + aData[0] + '">';
-                jqTds[1].innerHTML = '<input type="text" class="form-control small" value="' + aData[1] + '">';
-                jqTds[2].innerHTML = '<input type="text" class="form-control small" value="' + aData[2] + '">';
-                jqTds[3].innerHTML = '<input type="text" class="form-control small" value="' + aData[3] + '">';
-                jqTds[4].innerHTML = '<a class="edit" href="">Save</a>';
-                jqTds[5].innerHTML = '<a class="cancel" href="">Cancel</a>';
+                jqTds[1].innerHTML = '<tr class="form-control small" value="">';
+                jqTds[2].innerHTML = '<tr type="text" class="form-control small" value="">';
+                jqTds[3].innerHTML = '<a class="edit" href="">Save</a>';
             }
 
             function saveRow(oTable, nRow) {
@@ -31,9 +29,8 @@ var EditableTable = function () {
                 oTable.fnUpdate(jqInputs[0].value, nRow, 0, false);
                 oTable.fnUpdate(jqInputs[1].value, nRow, 1, false);
                 oTable.fnUpdate(jqInputs[2].value, nRow, 2, false);
-                oTable.fnUpdate(jqInputs[3].value, nRow, 3, false);
-                oTable.fnUpdate('<a class="edit" href="">Edit</a>', nRow, 4, false);
-                oTable.fnUpdate('<a class="delete" href="">Delete</a>', nRow, 5, false);
+                oTable.fnUpdate('<a class="edit" href="">Edit</a>', nRow, 3, false);
+                oTable.fnUpdate('<a class="delete" href="">Delete</a>', nRow, 4, false);
                 oTable.fnDraw();
             }
 
@@ -46,46 +43,47 @@ var EditableTable = function () {
                 oTable.fnUpdate('<a class="edit" href="">Edit</a>', nRow, 4, false);
                 oTable.fnDraw();
             }
-
-            var oTable = $('#editable-sample').dataTable({
-                "aLengthMenu": [
-                    [5, 15, 20, -1],
-                    [5, 15, 20, "All"] // change per page values here
-                ],
-                // set the initial value
-                "iDisplayLength": 5,
-                "sDom": "<'row'<'col-lg-6'l><'col-lg-6'f>r>t<'row'<'col-lg-6'i><'col-lg-6'p>>",
-                "sPaginationType": "bootstrap",
-                "oLanguage": {
-                    "sLengthMenu": "_MENU_ records per page",
-                    "oPaginate": {
-                        "sPrevious": "Prev",
-                        "sNext": "Next"
-                    }
-                },
-                "aoColumnDefs": [{
-                        'bSortable': false,
-                        'aTargets': [0]
-                    }
-                ]
-            });
-
-            jQuery('#editable-sample_wrapper .dataTables_filter input').addClass("form-control medium"); // modify table search input
-            jQuery('#editable-sample_wrapper .dataTables_length select').addClass("form-control xsmall"); // modify table per page dropdown
+            console.log($('#my-accounts'));
+            // var oTable = $('#my-accounts').dataTable({
+            //     "aLengthMenu": [
+            //         [5, 15, 20, -1],
+            //         [5, 15, 20, "All"] // change per page values here
+            //     ],
+            //     // set the initial value
+            //     "iDisplayLength": 4,
+            //     "sDom": "<'row'<'col-lg-6'l><'col-lg-6'f>r>t<'row'<'col-lg-6'i><'col-lg-6'p>>",
+            //     "sPaginationType": "bootstrap",
+            //     "oLanguage": {
+            //         "sLengthMenu": "_MENU_ accounts per page",
+            //         "oPaginate": {
+            //             "sPrevious": "Prev",
+            //             "sNext": "Next"
+            //         }
+            //     },
+            //     "aoColumnDefs": [{
+            //             'bSortable': false,
+            //             'aTargets': [0]
+            //         }
+            //     ]
+            // });
+            // jQuery('#my-accounts_wrapper .dataTables_filter input').addClass("form-control medium"); // modify table search input
+            // jQuery('#my-accounts_wrapper .dataTables_length select').addClass("form-control xsmall"); // modify table per page dropdown
 
             var nEditing = null;
 
-            $('#editable-sample_new').click(function (e) {
+            $('#my-accounts_new').click(function (e) {
                 e.preventDefault();
-                var aiNew = oTable.fnAddData(['', '', '', '',
-                        '<a class="edit" href="">Edit</a>', '<a class="cancel" data-mode="new" href="">Cancel</a>'
-                ]);
-                var nRow = oTable.fnGetNodes(aiNew[0]);
-                editRow(oTable, nRow);
-                nEditing = nRow;
+
+                // var aiNew = oTable.fnAddData(['', '', '', '',
+                //     '<a class="edit">Edit</a>', '<a class="cancel" data-mode="new">Cancel</a>'
+                // ]);
+                // var nRow = oTable.fnGetNodes(aiNew[0]);
+
+                // editRow(oTable, nRow);
+                // nEditing = nRow;
             });
 
-            $('#editable-sample a.delete').live('click', function (e) {
+            $('#my-accounts a.delete').on('click', function (e) {
                 e.preventDefault();
 
                 if (confirm("Are you sure to delete this row ?") == false) {
@@ -97,7 +95,7 @@ var EditableTable = function () {
                 alert("Deleted! Do not forget to do some ajax to sync with backend :)");
             });
 
-            $('#editable-sample a.cancel').live('click', function (e) {
+            $('#my-accounts a.cancel').on('click', function (e) {
                 e.preventDefault();
                 if ($(this).attr("data-mode") == "new") {
                     var nRow = $(this).parents('tr')[0];
@@ -108,7 +106,7 @@ var EditableTable = function () {
                 }
             });
 
-            $('#editable-sample a.edit').live('click', function (e) {
+            $('#my-accounts a.edit').on('click', function (e) {
                 e.preventDefault();
 
                 /* Get the row as a parent of the link that was clicked on */
