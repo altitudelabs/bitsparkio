@@ -1,7 +1,30 @@
 
 $(document).ready(function() {
 "use strict";
+var timer;
+// console.log($('#lock'));
+$('#lock').on('mouseover', function(e){
+	$(this).removeClass('fa-unlock-alt').addClass('fa-lock');
+});
+$('#lock').on('mouseout', function(e){
+	$(this).removeClass('fa-lock').addClass('fa-unlock-alt');
+});
 
+$(window).bind('scroll',function () {
+	console.log('running')
+	if(!$('#gear').hasClass('fa-spin')){
+		$('#gear').addClass('fa-spin');
+	}
+	if(!$('#money').hasClass('floating')){
+		$('#money').addClass('floating');
+	}
+    clearTimeout(timer);
+    timer = setTimeout( refresh , 300 );
+});
+var refresh = function () {
+	$('#gear').removeClass('fa-spin');
+	$('#money').removeClass('floating');
+};
 
 // *************
 // Selectbox
