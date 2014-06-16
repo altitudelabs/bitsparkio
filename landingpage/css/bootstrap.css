@@ -3826,6 +3826,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     float: left !important;
   }
   .navbar-right {
+    margin: 7px;
     float: right !important;
   }
 }
